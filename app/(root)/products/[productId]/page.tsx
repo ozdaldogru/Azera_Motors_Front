@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 import Gallery from "@/components/Gallery";
 import { getProductDetails } from "@/lib/actions/actions";
 import Specifications from "@/components/Specifications";

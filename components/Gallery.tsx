@@ -13,7 +13,7 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
         width={900}
         height={720}
         alt="product image"
-        className='w-900 h-[720px] object-cover rounded-xl'
+        className="w-900 h-[720px] object-cover rounded-xl"
       />
       <div className="flex gap-32 py-10 px-5 overflow-auto ">
         {productMedia.map((image, index) => (
