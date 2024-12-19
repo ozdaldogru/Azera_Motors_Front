@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import Gallery from "@/components/Gallery";
 import { getProductDetails } from "@/lib/actions/actions";
 import Specifications from "@/components/Specifications";
@@ -6,13 +6,9 @@ import Title from "@/components/Title";
 import Description from "@/components/Description";
 import Features from "@/components/Features";
 
-interface PageProps {
-  params: {
-    productId: string;
-  };
-}
+const ProductDetails = async (props: { params: Promise<{ productId: string }>}) => {
+  const params = await props.params;
 
-const ProductDetails = async ({ params }: PageProps) => {
   const productDetails = await getProductDetails(params.productId);
 
   return (
