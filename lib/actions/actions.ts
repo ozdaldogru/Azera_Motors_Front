@@ -31,12 +31,8 @@ const getProductDetails = async (productId: string) => {
   const searchedProducts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/search/${query}`)
   return searchedProducts.json()
 }
-/*
-const getOrders = async (customerId: string) => {
-  const orders = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/customers/${customerId}`)
-  return orders.json()
-}
-*/
+
+
 const getRelatedProducts = async (productId: string) => {
   const relatedProducts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${productId}/related`)
   return relatedProducts.json()
