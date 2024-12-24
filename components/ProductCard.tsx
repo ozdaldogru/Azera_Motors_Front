@@ -15,6 +15,9 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       href={`/products/${product._id}`}
       className="w-[400px] flex flex-col gap-2 border border-grey-2 rounded-lg p-2 hover:shadow-2xl"
     >
+       <div className="flex flex-col text-center gap-2">
+        <p className="text-base-bold text-[25px] rounded-sm" >{product.status}</p>
+      </div>
       <Image
         src={product.media[0]}
         alt="product"
@@ -23,7 +26,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         className="w-[100%] h-[300px] rounded-lg object-cover"
       />
       <div className="flex flex-col text-center gap-2">
-        <p className="text-base-bold text-white border border-black bg-red-500 rounded-sm" >{product.title}</p>
+        <p className={product.title[0]} >{product.title}</p>
         <p className="text-small-medium text-grey-2">{product.categories}</p>
         <p className="text-small-medium text-grey-2">{product.make}</p>
         <p className="text-small-medium text-grey-2">{product.mileage} KM</p>
