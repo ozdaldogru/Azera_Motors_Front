@@ -43,7 +43,7 @@ const Navbar = () => {
             pathname === "/"
           }`}
         >
-          <FaHome className="w-[50px] h-[50px]" />
+          <FaHome className="w-[50px] h-[50px] hover:text-teal-700" />
         </Link>
       </div>
  
