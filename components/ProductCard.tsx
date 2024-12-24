@@ -25,7 +25,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         height={300}
         className="w-[100%] h-[300px] rounded-lg object-cover"
       />
-      <div className="flex flex-col text-center gap-2">
+      <div className="flex flex-col text-center gap-2 w-full">
         <p className={product.title[0]} >{product.title}</p>
         <p className="text-small-medium text-grey-2">{product.categories}</p>
         <p className="text-small-medium text-grey-2">{product.make}</p>

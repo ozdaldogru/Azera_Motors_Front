@@ -7,15 +7,15 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
   const [mainImage, setMainImage] = useState(productMedia[0]);
 
   return (
-    <div className="flex-col w-full items-center gap-32 py-10 px-5 " >
+    <div className="flex flex-col gap-3 ">
       <Image
         src={mainImage}
         width={900}
         height={720}
         alt="product image"
-        className="w-900 h-[720px] object-cover rounded-xl"
+        className="w-900 h-720 rounded-lg shadow-xl object-cover"
       />
-      <div className="flex gap-32 py-10 px-5 overflow-auto ">
+      <div className="flex gap-2 overflow-auto tailwind-scrollbar-hide">
         {productMedia.map((image, index) => (
           <Image
             key={index}
@@ -23,7 +23,7 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
             height={40}
             width={40}
             alt="product"
-            className={`w-40 h-40 rounded-lg object-cover cursor-pointer ${mainImage === image ? "border-2 border-black" : ""}`}
+            className={`w-20 h-20 rounded-lg object-cover cursor-pointer ${mainImage === image ? "border-2 border-black" : ""}`}
             onClick={() => setMainImage(image)}
           />
         ))}
