@@ -45,7 +45,9 @@ function Footer() {
               </ul>
 
             </div>
-            <div>              
+            <div>    
+                <h2 className=" text-[24px] flex flex-wrap justify-center px-20 gap- md:gap-8 lg:gap-12 text-[20px] text-bold underline underline-offset-4 mb-5">CALL US</h2>    
+                  <a href="tlf:+1-437-505-63-34" className="text-center text-[24px] text-red-700"><p>437-505-63-34</p></a>      
                 <h2 className=" text-[24px] flex flex-wrap justify-center px-20 gap- md:gap-8 lg:gap-12 text-[20px] text-bold underline underline-offset-4 mb-5">FOLLOW US</h2>
             
                 <ul className="mt-6 flex justify-center gap-6 md:gap-8">
@@ -104,6 +106,7 @@ function Footer() {
 
                 </ul>
                 <br />
+
 
             </div>
             <div className="w-1/10 h-1/5 sm:h-[96px] sm:w-[96px]">
