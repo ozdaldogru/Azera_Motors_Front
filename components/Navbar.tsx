@@ -14,9 +14,10 @@ const Navbar = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center bg-[#ccc] max-sm:px-2">
+    <div>
+          <div className="top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center bg-[#ccc] max-sm:px-2">
       <Link href="/">
-        <Image src="/logo2.webp" alt="logo" width={60} height={60} />
+        <Image src="/logo.png" alt="logo" width={400} height={200} />
       </Link>
 
 
@@ -42,14 +43,13 @@ const Navbar = () => {
             pathname === "/"
           }`}
         >
-          <FaHome />
+          <FaHome className="w-[50px] h-[50px]" />
         </Link>
       </div>
-
-
-
-  
+ 
     </div>
+    </div>
+
   );
 };
 

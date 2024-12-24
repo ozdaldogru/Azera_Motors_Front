@@ -3,10 +3,10 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
     return (
 
-        <div className="grid grid-cols-1 gap-4 mt-8"> 
+        <div className="flex flex-col w-full items-center py-2 gap-2 grid grid-cols-3"> 
 
         
-        <div className=" gap-16">
+        <div className="gap-16">
         <p className="text-base-medium text-grey-2">Make:</p>
         <p className="text-base-bold">{productInfo.make}</p>
         </div>

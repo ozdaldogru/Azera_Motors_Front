@@ -10,7 +10,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
 
   return (
 
-<div>
+<div >
 <div><Title productInfo={productInfo}/></div>
 <div><Specifications productInfo={productInfo}/></div>
 <div><Features productInfo={productInfo}/></div>
