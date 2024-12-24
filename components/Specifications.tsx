@@ -3,7 +3,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
     return (
 
-        <div className="flex flex-col w-full items-center py-2 gap-2 grid grid-cols-3"> 
+        <div className="flex flex-col w-full text-center items-center py-2 gap-2"> 
 
         
         <div className="gap-16">

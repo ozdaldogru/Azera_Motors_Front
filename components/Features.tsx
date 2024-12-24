@@ -6,7 +6,7 @@ const Features = ({ productInfo }: { productInfo: ProductType }) => {
 
   return (
 
-        <div className="flex flex-col w-full items-center gap-2 grid grid-cols-3">
+        <div className="flex flex-col w-full items-center gap-2">
 
             <div className="flex flex-col gap-2 py-2">     
                 {productInfo.features.length > 0 && (
