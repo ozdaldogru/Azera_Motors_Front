@@ -1,7 +1,7 @@
 "use client";
 
 import { FaHome } from "react-icons/fa";
-import { FcPhone } from "react-icons/fc";
+import { HiPhoneMissedCall } from "react-icons/hi";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
           <div className="bg-[#ccc] flex flex-col gap-2 w-full sm:w-full">
 
-            <div className="flex flex-wrap justify-between px-4 py-4 gap-8">
+            <div className="flex flex-wrap justify-between align-items-center px-4 py-4 gap-8">
 
 
-                 <div className="flex gap-4 justify-items-center items-stretch sm:h-min-[96px] ">
+                 <div className="flex gap-4 items-stretch sm:h-min-[96px] ">
                     <Link href="/">
                       <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }}/>
                     </Link>
@@ -41,11 +41,14 @@ const Navbar = () => {
                     </button>
                   </div>
 
-                  <div className="flex flex-row align-item-center gap-1 text-[30px]">
-
-                      <FcPhone className="w-[50px] h-[40px] hover:text-teal-700"/> <a href="tel:14375056334" className="text-center text-[24px] text-red-700 sm:text-[10]">437-505-63-34</a>
-                  
-                  </div>
+                   <div className="flex flex-wrap justify-center align-items-center gap-8 w-300px">
+                     <div className="flex flex-wrap justify-center gap-8">
+                       <a href="tel:14375056334" className="text-center text-[24px] text-red-700 hover:text-green-700"><HiPhoneMissedCall /></a>
+                      </div>
+                      <div className="flex flex-wrap justify-center gap-8">
+                       <a href="/" className="text-center text-[24px] text-black-700 hover:text-green-700"><FaHome/></a>
+                      </div>
+              </div>
 
 
             </div>
