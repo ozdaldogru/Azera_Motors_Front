@@ -61,16 +61,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-/*
-                  <div className="flex gap-4 px-8 justify-items-center align-item-center sm:h-min-[96px] sm:w-min-full">
-                    <Link
-                      href="/"
-                      className={`hover:text-red-1 ${
-                        pathname === "/"
-                      }`}
-                    >
-                      <FaHome className="w-[30px] h-[30px] sm:w-[50px] h-[50px]"/>
-                    </Link>
-                  </div>
-
-*/
