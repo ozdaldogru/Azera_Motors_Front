@@ -22,7 +22,7 @@ const Navbar = () => {
 
                  <div className="flex gap-4 justify-items-center items-stretch sm:h-min-[96px] ">
                     <Link href="/">
-                      <Image src="/logo.png" alt="logo" width={300} height={300} />
+                      <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }}/>
                     </Link>
                   </div>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
 
                   <div className="flex flex-row align-item-center gap-1 text-[30px]">
 
-                      <FcPhone className="w-[50px] h-[40px] hover:text-teal-700"/> <a href="tlf:+14375056334" className="text-center text-[24px] text-red-700 sm:text-[10]">437-505-63-34</a>
+                      <FcPhone className="w-[50px] h-[40px] hover:text-teal-700"/> <a href="tel:14375056334" className="text-center text-[24px] text-red-700 sm:text-[10]">437-505-63-34</a>
                   
                   </div>
 

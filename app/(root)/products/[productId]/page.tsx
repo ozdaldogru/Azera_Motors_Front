@@ -20,8 +20,8 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
                   <Title productInfo={productDetails} />
                 </div>
 
-                <div className="flex flex-wrap gap-16 px-15 lg:gap-24 sm:w-full">
-                      <div className="flex flex-col border border-black-200 rounded-lg sm:w-full">
+                <div className="flex flex-wrap gap-16 px-15 lg:gap-24">
+                      <div className="flex flex-col rounded-lg">
                         <Gallery productMedia={productDetails.media} />
                       </div>
 
@@ -30,7 +30,7 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
                         <Specifications productInfo={productDetails} />
                       </div>
 
-                      <div className="flex flex-col px-5 gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg">
+                      <div className="flex flex-col px-5 gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg ">
                         <h2 className="text-[20px] text-bold underline underline-offset-4 py-2">Features:</h2>
                         <Features productInfo={productDetails} />
                       </div>
