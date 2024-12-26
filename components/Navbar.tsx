@@ -1,7 +1,10 @@
 "use client";
 
 import { FaHome } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
 import { HiPhoneMissedCall } from "react-icons/hi";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { FaCommentSms } from "react-icons/fa6";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,14 +44,19 @@ const Navbar = () => {
                     </button>
                   </div>
 
-                   <div className="flex flex-wrap justify-center align-items-center gap-8 w-300px">
-                     <div className="flex flex-wrap justify-center gap-8">
-                       <a href="tel:14375056334" className="text-center text-[24px] text-red-700 hover:text-green-700"><HiPhoneMissedCall /></a>
-                      </div>
-                      <div className="flex flex-wrap justify-center gap-8">
-                       <a href="/" className="text-center text-[24px] text-black-700 hover:text-green-700"><FaHome/></a>
-                      </div>
+                  <div className="flex flex-col justify-center gap-4">   
+
+                <div className="flex flex-wrap justify-center gap-8">   
+                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700 hover:text-[45px] hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
+                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600 hover:text-[45px] hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
+                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-[45px]" target="blank"><RiWhatsappFill /></a>
+                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-[45px]" target="blank"><IoMailOpenOutline /></a>
+                  <a href="/" className="text-center text-[30px] text-black-600 hover:text-[45px] hover:text-green-700" target="blank"><FaHome/></a>
+ 
               </div>
+
+
+            </div>
 
 
             </div>
