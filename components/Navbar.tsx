@@ -32,7 +32,7 @@ const Navbar = () => {
                   <div className="flex gap-4 border border-grey-2 px-10  items-stretch rounded-lg bg-white h-[40px]">
                     <input
                       className="outline-none w-full"
-                      placeholder="Search..."
+                      placeholder="Type and Click On Button"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
                     />

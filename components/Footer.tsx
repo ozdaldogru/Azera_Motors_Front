@@ -130,7 +130,7 @@ function Footer() {
 
 
             </div>
-            <div className="w-1/10 h-1/5 sm:h-[96px] sm:w-[96px]">
+            <div className="rounded-lg sm:h-[96px] sm:w-[96px]">
               <GoogleMaps />
             </div>
 
