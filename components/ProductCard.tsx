@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import LowMileageBadge  from "@/components/LowMileageBadge";
 
 
 interface ProductCardProps {
@@ -32,6 +32,23 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <p className="text-small-medium text-grey-2">{product.mileage} KM</p>
         <p className="text-small-medium text-grey-2">{product.year}</p>
         <p className="text-small-medium text-grey-2">${product.price}</p>
+        {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
+        <p className="text-body-bold border border-solid bg-green-300">Low Mileage</p>
+      ) : (
+        <div className="flex flex-wrap justify-center gap-16 ">
+
+        <p className="text-body-bold">Not Low Mileage</p>
+        </div>
+      )}
+
+         {product.numberofowner === 1 || product.numberofowner < 2 ? (
+        <p className="text-body-bold border border-solid bg-green-300">{product.numberofowner} Owner</p>
+      ) : (
+        <div className="flex flex-wrap justify-center gap-16 ">
+        <p className="text-body-bold ">{product.numberofowner} Owners</p>
+        </div>
+      )}
+
       </div>
     </Link>
   );
