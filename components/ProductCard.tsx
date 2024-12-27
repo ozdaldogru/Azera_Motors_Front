@@ -36,7 +36,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       ) : (
         <div className="flex flex-wrap justify-center gap-16 ">
 
-        <p className="text-body-bold">Not Low Mileage</p>
+        <p className="text-small-medium text-grey-2">Not Low Mileage</p>
         </div>
       )}
 
@@ -44,7 +44,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <p className="text-body-bold border border-solid bg-green-300">{product.numberofowner} Owner</p>
       ) : (
         <div className="flex flex-wrap justify-center gap-16 ">
-        <p className="text-body-bold ">{product.numberofowner} Owners</p>
+        <p className="text-small-medium text-grey-2">{product.numberofowner} Owners</p>
         </div>
       )}
 
