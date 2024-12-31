@@ -16,24 +16,24 @@ const ProductCard = ({ product }: ProductCardProps ) => {
     >
       {product.status === "Pending" ? (
             <div className="flex flex-col text-center rounded-lg gap-2 bg-orange-400">
-                 <p className="text-base-bold text-[35px] rounded-sm" >{product.status}</p>
+                 <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
             </div>
       ) : (
       
       product.status === "Archived"  ? (
         <div className="flex flex-col text-center rounded-lg gap-2 bg-blue-500">
-             <p className="text-base-bold text-[35px] rounded-sm" >{product.status}</p>
+             <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
         </div>
   ) : (
       
     product.status === "Sold Out"  ? (
       <div className="flex flex-col text-center rounded-lg gap-2 bg-red-500">
-           <p className="text-base-bold text-[35px] rounded-sm" >{product.status}</p>
+           <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
       </div>
 ) :
 (
     <div className="flex flex-col text-center rounded-lg gap-2 bg-green-300">
-        <p className="text-base-bold text-[35px] rounded-sm" >{product.status}</p>
+        <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
    </div>
   )))
 }
@@ -48,8 +48,8 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         className="w-[100%] h-[300px] rounded-lg object-cover"
       />
       <div className="flex flex-col text-center gap-2 w-full">
-        <p className={product.title[0]} >{product.title}</p>
-        <p className="text-small-medium text-grey-2">{product.categories}</p>
+        <p className="text-bold text-[30px] underline" >{product.title}</p>
+        <p className="text-small-medium text-gold-2">{product.categories}</p>
         <p className="text-small-medium text-grey-2">{product.make}</p>
         <p className="text-small-medium text-grey-2">{product.mileage} KM</p>
         <p className="text-small-medium text-grey-2">{product.year}</p>
