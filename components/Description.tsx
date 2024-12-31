@@ -1,5 +1,6 @@
 "use client";
-import { FaCheck } from "react-icons/fa6";
+import HTMLReactParser from "html-react-parser";
+
 
 const Description = ({ productInfo }: { productInfo: ProductType }) => {
 
@@ -8,7 +9,8 @@ const Description = ({ productInfo }: { productInfo: ProductType }) => {
 
     <div className="flex flex-col w-full items-center gap-2">
 
-        <p>{productInfo.description}</p>
+<div>{HTMLReactParser(productInfo.description)}</div>
+      
 
     </div>  
   );
