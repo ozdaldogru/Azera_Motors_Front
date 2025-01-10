@@ -10,7 +10,11 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps ) => {
   return (
-    <Link
+    <>
+    {product.status === "Archived" ? (""
+) : (
+
+  <Link
       href={`/products/${product._id}`}
       className="w-[400px] flex flex-col gap-2 border border-grey-2 rounded-lg p-2 hover:shadow-2xl"
     >
@@ -56,24 +60,20 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <p className="text-small-medium text-grey-2">${product.price}</p>
         {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
         <p className="text-body-bold border border-solid rounded-md bg-green-300">Low Mileage</p>
-      ) : (
-        <div className="flex flex-wrap justify-center gap-16 ">
-
-        <p className="text-small-medium text-grey-2">Not Low Mileage</p>
-        </div>
-      )}
+      ) : ("")}
 
          {product.numberofowner === 1 || product.numberofowner < 2 ? (
         <p className="text-body-bold border border-solid rounded-md bg-green-300">{product.numberofowner} Owner</p>
-      ) : (
-        <div className="flex flex-wrap justify-center gap-16 ">
-        <p className="text-small-medium text-grey-2">{product.numberofowner} Owners</p>
-        </div>
-      )}
+      ) : ("")}
 
       </div>
     </Link>
+
+    )}
+    </>
   );
 };
+
+
 
 export default ProductCard;

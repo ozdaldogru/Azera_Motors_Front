@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
 
@@ -5,6 +7,14 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
         <div className="flex flex-col w-full text-center items-center py-2 gap-2 grid grid-cols-2"> 
 
+        {productInfo.history === "" ? ("") : (
+        <div className="flex flex-col w-full text-center items-center py-2 gap-2"> 
+        <p className="text-base-medium text-grey-2">History:</p>
+        <p className="text-base-bold ">
+            <a href={productInfo.history} target="_blank" >      
+                    <Image src="/carfax.svg" alt="carfax car history logo" width={100} height={50} style={{ height: "auto" }}/>
+              </a></p>
+        </div>)}
         
         <div className="gap-16">
         <p className="text-base-medium text-grey-2">Make:</p>
@@ -31,10 +41,11 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-base-bold">{productInfo.condition}</p>
         </div>
 
+        {productInfo.numberofowner === 1 || productInfo.numberofowner < 2 ? (
         <div className=" gap-16">
         <p className="text-base-medium text-grey-2">Number Of Owner(s):</p>
         <p className="text-base-bold">{productInfo.numberofowner}</p>
-        </div>
+        </div>) : ("")}
 
         <div className=" gap-16">
         <p className="text-base-medium text-grey-2">Year:</p>
@@ -46,10 +57,11 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-base-bold">{productInfo.mileage}</p>
         </div>
 
+        {productInfo.lowmileage === "Yes" || productInfo.lowmileage === "yes" ? (
         <div className=" gap-16">
         <p className="text-base-medium text-grey-2">Low Mileage?:</p>
         <p className="text-base-bold">{productInfo.lowmileage}</p>
-        </div>
+        </div>) : ("")}
 
         <div className=" gap-16">
         <p className="text-base-medium text-grey-2">Drive Type:</p>

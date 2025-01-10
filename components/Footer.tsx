@@ -72,7 +72,7 @@ function Footer() {
             <ul className="mt-6 flex justify-center gap-6 md:gap-8">
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61571836432279"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:text-blue-700"

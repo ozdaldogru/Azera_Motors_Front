@@ -32,6 +32,7 @@ type ProductType = {
   media: [string];
   vin: string;
   categories: string;
+  history: string;
   createdAt: Date;
   updatedAt: Date;
 }
