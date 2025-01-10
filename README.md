@@ -2,7 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create a .env file and fill up this details
+
+MONGODB_URL = 
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+
+ADMIN_DASHBOARD_URL=
+NEXT_PUBLIC_API_URL={ADMIN_DASHBOARD_URL}/api // same as admin dashboard url only difference is there is "/api" extension at the end.
+
+
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=
+
+
+
+Second, run the development server:
 
 ```bash
 npm run dev
