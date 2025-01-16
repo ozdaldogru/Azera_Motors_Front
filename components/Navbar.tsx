@@ -18,7 +18,7 @@ const Navbar = () => {
   const [query, setQuery] = useState("");
 
   return (
-          <div className="bg-[#ccc] flex flex-col gap-2 w-full sm:w-full">
+          <div className="bg-[#d4dce2] sticky top-0  flex flex-col gap-2 w-full sm:w-full">
 
             <div className="flex flex-wrap justify-between align-items-center px-4 py-4 gap-8">
 
@@ -47,11 +47,11 @@ const Navbar = () => {
                   <div className="flex flex-col justify-center gap-4">   
 
                 <div className="flex flex-wrap justify-center gap-8">   
-                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700 hover:text-[45px] hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
-                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600 hover:text-[45px] hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
-                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-[45px]" target="blank"><RiWhatsappFill /></a>
-                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-[45px]" target="blank"><IoMailOpenOutline /></a>
-                  <a href="/" className="text-center text-[30px] text-black-600 hover:text-[45px] hover:text-green-700" target="blank"><FaHome/></a>
+                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700  hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
+                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600  hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
+                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-orange-500" target="blank"><RiWhatsappFill /></a>
+                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-red-700" target="blank"><IoMailOpenOutline /></a>
+                  <a href="/" className="text-center text-[30px] text-black-600  hover:text-green-700" target="blank"><FaHome/></a>
  
               </div>
 

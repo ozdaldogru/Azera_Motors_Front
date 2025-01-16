@@ -21,22 +21,25 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
                 </div>
 
                 <div className="flex flex-wrap gap-16 px-15 lg:gap-24">
-                      <div className="flex flex-col rounded-lg">
+                      <div className="flex flex-col">
                         <Gallery productMedia={productDetails.media} />
                       </div>
 
-                      <div className="flex flex-col px-5 gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg">
-                        <h2 className="text-[20px] text-bold underline underline-offset-4 py-2">Specifications:</h2>
+                      <div className="flex flex-col gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg bg-gray-50">
+                        <h2 className="bg-black text-white text-[25px] text-bold text-center py-2">Specifications:</h2>
                         <Specifications productInfo={productDetails} />
                       </div>
 
-                      <div className="flex flex-col px-5 gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg ">
-                        <h2 className="text-[20px] text-bold underline underline-offset-4 py-2">Features:</h2>
+                      <div className="flex flex-col gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg bg-gray-50">
+                      <h2 className="bg-black text-white text-[25px] text-bold text-center py-2">Features:</h2>
+                        <div className="justify-items-center">
                         <Features productInfo={productDetails} />
+                        </div>
+                        
                       </div>
 
-                      <div className="flex flex-col px-5 gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg">
-                      <h2 className="text-bold underline underline-offset-4 text-[24px] py-2">Description:</h2>
+                      <div className="flex flex-col gap-2 md:gap-12 lg:gap-5 border border-black-200 rounded-lg bg-gray-50">
+                      <h2 className="bg-black text-white text-[25px] text-bold text-center py-2">Description:</h2>
                       <Description productInfo={productDetails} />
                     </div>
                 </div>

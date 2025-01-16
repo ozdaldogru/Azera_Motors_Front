@@ -7,45 +7,46 @@ import { FaCommentSms } from "react-icons/fa6";
 
 function Footer() {
     return (
-      <footer className="bg-[#ccc] flex flex-col justify-between items-center gap-10 py-8 px-5">
+      <footer className="bg-[#d4dce2] flex flex-col justify-between items-center gap-10 py-8 px-5">
         
       <div className="flex flex-wrap justify-center gap-16">
 
-            <div>
+            <div className="gap-4 ">
 
-              <h2 className="text-[24px] text-bold underline underline-offset-4 ">Operation Hours:</h2>
-              <ul className=" sm:text-[16px] flex flex-col px-02 md:text-[20px]">
+              <h2 className="text-[24px] text-bold px-02 gap-4  underline underline-offset-4 ">Operation Hours:</h2>
+           
+              <ul className=" sm:text-[16px] flex flex-col px-02 gap-4 md:text-[20px]">
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition " > Monday: </p>
-                  <p className="text-green-900-bold transition  justify-right" > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition  justify-right" > 09:00a.m.-08:00p.m. </p>
                 </li>
 
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Tuesday: </p>
-                  <p className="text-green-100-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-100-bold transition " > 09:00a.m.-08:00p.m. </p>
                 </li>
 
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Wednesday: </p>
-                  <p className="text-green-900-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition " > 09:00a.m.-08:00p.m. </p>
                 </li>
 
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Thursday: </p>
-                  <p className="text-green-900-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition " > 09:00a.m.-08:00p.m. </p>
                 </li>
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Friday: </p>
-                  <p className="text-green-900-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition " > 09:00a.m.-08:00p.m. </p>
                 </li>
 
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Saturday: </p>
-                  <p className="text-green-900-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition " > 09:00a.m.-08:00p.m. </p>
                 </li>
                 <li className=" flex flex-wrap space-x-2">
                   <p className="text-green-900-bold transition "> Sunday: </p>
-                  <p className="text-green-900-bold transition " > 09:00-20:00 </p>
+                  <p className="text-green-900-bold transition " > 09:00a.m.-03:00p.m. </p>
                 </li>
               </ul>
 
@@ -54,10 +55,10 @@ function Footer() {
             <div className="flex flex-col justify-center gap-4">   
                 <h2 className=" text-[24px] flex flex-wrap justify-center px-20 gap-2 md:gap-8 lg:gap-2 text-[20px] text-bold underline underline-offset-4 mb-5">CONTACT US:</h2>   
                 <div className="flex flex-wrap justify-center gap-8">   
-                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700 hover:text-[45px] hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
-                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600 hover:text-[45px] hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
-                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-[45px]" target="blank"><RiWhatsappFill /></a>
-                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-[45px]" target="blank"><IoMailOpenOutline />
+                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700  hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
+                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600  hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
+                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-orange-500" target="blank"><RiWhatsappFill /></a>
+                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-red-700" target="blank"><IoMailOpenOutline />
 
                   </a>
  

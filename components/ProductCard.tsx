@@ -16,10 +16,10 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[400px] flex flex-col gap-2 border border-grey-2 rounded-lg p-2 hover:shadow-2xl"
+      className="w-[400px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] rounded-lg p-2 hover:shadow-2xl"
     >
       {product.status === "Pending" ? (
-            <div className="flex flex-col text-center rounded-lg gap-2 bg-orange-400">
+            <div className="flex flex-col text-center rounded-lg gap-2 bg-orange-500">
                  <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
             </div>
       ) : (
@@ -31,12 +31,12 @@ const ProductCard = ({ product }: ProductCardProps ) => {
   ) : (
       
     product.status === "Sold Out"  ? (
-      <div className="flex flex-col text-center rounded-lg gap-2 bg-red-500">
+      <div className="flex flex-col text-center text-white rounded-lg gap-2 bg-red-500 ">
            <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
       </div>
 ) :
 (
-    <div className="flex flex-col text-center rounded-lg gap-2 bg-green-300">
+    <div className="flex flex-col text-center text-white rounded-lg gap-2 bg-green-700">
         <p className="text-bold text-[35px] rounded-sm" >{product.status}</p>
    </div>
   )))
@@ -53,17 +53,17 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       />
       <div className="flex flex-col text-center gap-2 w-full">
         <p className="text-bold text-[30px] underline" >{product.title}</p>
-        <p className="text-small-medium text-gold-2">{product.categories}</p>
-        <p className="text-small-medium text-grey-2">{product.make}</p>
-        <p className="text-small-medium text-grey-2">{product.mileage} KM</p>
-        <p className="text-small-medium text-grey-2">{product.year}</p>
-        <p className="text-small-medium text-grey-2">${product.price}</p>
+        <p className="text-body-bold text-grey-2">{product.categories}</p>
+        <p className="text-body-bold text-grey-2">{product.make}</p>
+        <p className="text-body-bold text-grey-2">{product.mileage} KM</p>
+        <p className="text-body-bold text-grey-2">{product.year}</p>
+        <p className="text-body-bold text-grey-2">${product.price}</p>
         {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
-        <p className="text-body-bold border border-solid rounded-md bg-green-300">Low Mileage</p>
+        <p className="text-body-bold">* Low Mileage</p>
       ) : ("")}
 
          {product.numberofowner === 1 || product.numberofowner < 2 ? (
-        <p className="text-body-bold border border-solid rounded-md bg-green-300">{product.numberofowner} Owner</p>
+        <p className="text-body-bold">* {product.numberofowner} Owner</p>
       ) : ("")}
 
       </div>
