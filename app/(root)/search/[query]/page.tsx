@@ -13,7 +13,7 @@ const SearchPage = async (props: { params: Promise<{ query: string }>}) => {
       {!searchedProducts || searchedProducts.length === 0 && (
         <p className="text-body-bold my-5">No result found</p>
       )}
-      <div className="flex flex-wrap justify-between gap-16">
+      <div className="flex flex-wrap justify-items-center gap-16">
         {searchedProducts?.map((product: ProductType) => (
           <ProductCard key={product._id} product={product} />
         ))}

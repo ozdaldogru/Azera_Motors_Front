@@ -19,4 +19,6 @@ const getRelatedProducts = async (productId: string) => {
   return relatedProducts.json()
 }
 
+
 export {getProducts, getProductDetails, getSearchedProducts, getRelatedProducts };
+
