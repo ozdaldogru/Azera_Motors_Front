@@ -5,17 +5,38 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { HiPhoneMissedCall } from "react-icons/hi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaCommentSms } from "react-icons/fa6";
-import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
+
 
 const Navbar = () => {
-  const pathname = usePathname();
+  const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
-  const [query, setQuery] = useState("");
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      router.push(`/search/${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
+  interface KeyPressEvent extends KeyboardEvent {
+    key: string;
+  }
+
+  const handleKeyPress = (event: KeyPressEvent) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [searchQuery]);
 
   return (
           <div className="bg-[#d4dce2] sticky top-0  flex flex-col gap-2 w-full sm:w-full">
@@ -29,20 +50,21 @@ const Navbar = () => {
                     </Link>
                   </div>
 
-                  <div className="flex gap-4 border border-grey-2 px-10  items-stretch rounded-lg bg-white h-[40px]">
-                    <input
-                      className="outline-none w-full"
-                      placeholder="Search Titles"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                    />
-                    <button
-                      disabled={query === ""}
-                      onClick={() => router.push(`/search/${query}`)}
-                    >
-                      <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
-                    </button>
-                  </div>
+                  <div className="flex items-center">
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search"
+                        className="px-4 py-2 rounded-l-md border border-gray-300"
+                      />
+                      <button
+                        onClick={handleSearch}
+                        className="px-4 py-2 bg-green-500 text-white border-gray-300 rounded-r-md"
+                      >
+                        Search
+                      </button>
+                </div>
 
                   <div className="flex flex-col justify-center gap-4">   
 
