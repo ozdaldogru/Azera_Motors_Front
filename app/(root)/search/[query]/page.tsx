@@ -4,7 +4,6 @@ import { getSearchedProducts } from "@/lib/actions/actions"
 const SearchPage = async (props: { params: Promise<{ query: string }>}) => {
   const params = await props.params;
   const searchedProducts = await getSearchedProducts(params.query)
-
   const decodedQuery = decodeURIComponent(params.query)
 
   return (
