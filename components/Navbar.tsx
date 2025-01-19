@@ -7,6 +7,7 @@ import { IoMailOpenOutline } from "react-icons/io5";
 import { FaCommentSms } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -55,14 +56,14 @@ const Navbar = () => {
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        placeholder="Search"
+                        placeholder="Search..."
                         className="px-4 py-2 rounded-l-md border border-gray-300"
                       />
                       <button
                         onClick={handleSearch}
-                        className="px-4 py-2 bg-green-500 text-white border-gray-300 rounded-r-md"
+                        className="px-4 py-3 bg-green-500 text-white border-gray-300 rounded-r-md"
                       >
-                        Search
+                         <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
                       </button>
                 </div>
 
