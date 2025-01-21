@@ -1,15 +1,11 @@
 "use client";
 
-import { FaHome } from "react-icons/fa";
-import { RiWhatsappFill } from "react-icons/ri";
-import { HiPhoneMissedCall } from "react-icons/hi";
-import { IoMailOpenOutline } from "react-icons/io5";
-import { FaCommentSms } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
 
 
 const Navbar = () => {
@@ -39,19 +35,62 @@ const Navbar = () => {
     };
   }, [searchQuery]);
 
+  const [dropdownMenu, setDropdownMenu] = useState(false);
+
   return (
-          <div className="bg-[#d4dce2] sticky top-0  flex flex-col gap-2 w-full sm:w-full">
+          <div className="bg-[#d4dce2] sticky top-0 ">
 
-            <div className="flex flex-wrap justify-between align-items-center px-4 py-4 gap-8">
+            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-col  sm:items-center sm:gap-8">
 
 
-                 <div className="flex gap-4 items-stretch sm:h-min-[96px] ">
+                 <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
                     <Link href="/">
                       <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }}/>
                     </Link>
-                  </div>
+                 </div>
 
-                  <div className="flex items-center">
+
+
+               <div className=" flex flex-col justify-center gap-4">   
+
+                <div className="max-[600px]:hidden flex flex-wrap justify-center gap-8 font-bold ">   
+                    <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                    <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
+                    <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
+                </div>
+
+                <div className="min-[601px]:hidden relative flex gap-4 items-center">
+                <Menu
+                  className=" cursor-pointer "
+                  onClick={() => setDropdownMenu(!dropdownMenu)}
+                />
+                {dropdownMenu && (
+                  <div className="absolute top-10 right-6 flex flex-col gap-8 p-5 bg-white shadow-xl rounded-lg w-240">
+              
+                          <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                            <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
+                            <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
+
+                  </div>
+                )}
+
+              </div>
+               </div>
+
+
+            </div>
+ 
+           </div>
+   
+
+  );
+};
+
+export default Navbar;
+
+
+/*
+                  <div className="flex items-center sm:w-full">
                       <input
                         type="text"
                         value={searchQuery}
@@ -65,30 +104,5 @@ const Navbar = () => {
                       >
                          <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
                       </button>
-                </div>
-
-                  <div className="flex flex-col justify-center gap-4">   
-
-                <div className="flex flex-wrap justify-center gap-8">   
-                  <a href="tel:14375056334" className="text-center text-[30px] text-red-700  hover:text-green-700" target="blank"><p><HiPhoneMissedCall /></p></a>    
-                  <a href="sms:14375056334" className="text-center text-[30px] text-black-600  hover:text-blue-700 " target="blank"><FaCommentSms /></a> 
-                  <a href="https://wa.me/14375056334" className="text-center text-[30px] text-green-600 hover:text-orange-500" target="blank"><RiWhatsappFill /></a>
-                  <a href="mailto:ozdaldogru@gmail.com" className="text-center text-[30px] text-black-600 hover:text-red-700" target="blank"><IoMailOpenOutline /></a>
-                  <a href="/" className="text-center text-[30px] text-black-600  hover:text-green-700" target="blank"><FaHome/></a>
- 
-              </div>
-
-
-            </div>
-
-
-            </div>
- 
-           </div>
-   
-
-  );
-};
-
-export default Navbar;
-
+                  </div>
+*/

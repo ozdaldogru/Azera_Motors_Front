@@ -36,7 +36,7 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
       />
       </div>
 
-    <div className="flex flex-wrap gap-2 overflow-auto tailwind-scrollbar-hide">
+    <div className="flex flex-wrap gap-2 justify-center overflow-auto tailwind-scrollbar-hide">
 
     {productMedia.map((image, index) => (
           <Image

@@ -101,8 +101,12 @@ const config: Config = {
         "red-1": "#FF0000",
         "grey-1": "#F7F7F7",
         "grey-2": "#8A8A8A",
+        
       },
+      textDecoration: {"active": "underline"},
+      
     },
+
   },
   plugins: [require("tailwind-scrollbar-hide")],
 };
