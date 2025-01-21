@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[400px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] rounded-sm p-2 shadow-lg hover:shadow-2xl"
+      className="w-[360px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] rounded-sm p-2 shadow-lg hover:shadow-2xl"
     >
       <Image
         src={product.media[0]}
@@ -24,6 +24,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         width={390}
         height={300}
         className="w-[100%] h-[300px] rounded-lg object-cover"
+        loading="lazy"
       />
             {product.status === "Pending" ? (
             <div className="flex flex-col text-center rounded-lg gap-2 bg-orange-500">

@@ -8,10 +8,6 @@ export default function Home() {
   return (
     <>
       <div >
-        <div className="w-full py-2 ">
-        <Hero />
-        </div>
-        
        
       <ProductList />
 
@@ -21,4 +17,3 @@ export default function Home() {
 }
 
 export const dynamic = "force-dynamic";
-
