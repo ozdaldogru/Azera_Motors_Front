@@ -55,7 +55,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <p className="text-body-bold text-grey-2">{product.make}</p>
         <p className="text-body-bold text-grey-2">{product.mileage} KM</p>
         <p className="text-body-bold text-grey-2">{product.year}</p>
-        <p className="text-body-bold text-grey-2">${product.price}</p>
+        <p className="text-body-bold text-grey-2">${product.price.toLocaleString()}</p>
 
 
         <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#E4E4E4] py-2">
