@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[360px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] rounded-sm p-2 shadow-lg hover:shadow-2xl"
+      className="w-[300px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] rounded-sm p-2 shadow-lg hover:shadow-2xl"
     >
       <Image
         src={product.media[0]}
@@ -61,10 +61,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#E4E4E4] py-2">
 
         {product.history === "" ? ("") : (  
-
-             
-                    <Image src="/carfax.svg" alt="carfax car history logo" width={100} height={50} style={{ height: "auto" }}/>
-           
+         <Image src="/carfax.svg" alt="carfax car history logo" width={100} height={50} style={{ height: "auto" }}/>
         )}
         {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
         <button className="bg-green-500  text-white py-2 px-4 border rounded">Low Mileage</button>

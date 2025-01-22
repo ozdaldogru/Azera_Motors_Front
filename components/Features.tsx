@@ -10,7 +10,7 @@ const Features = ({ productInfo }: { productInfo: ProductType }) => {
 
             <div >     
                 {productInfo.features.length > 0 && (
-                    <div className="py-2 gap-2 grid grid-cols-3">
+                    <div className="py-2 gap-2 grid grid-cols-3 text-[20px] ">
                       {productInfo.features.map((feature, index) => (
                         <div className="flex gap-2 items-center" key={index}>
                           <FaCheck className="text-25 p-1 rounded-full bg-transparent-300 text-green-500" />

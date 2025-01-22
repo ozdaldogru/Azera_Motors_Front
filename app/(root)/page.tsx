@@ -12,8 +12,10 @@ export default function Home() {
         <Hero />
         </div>
         
-       
-      <ProductList />
+       <div className="items-center justify-center"> 
+        <ProductList />
+       </div>
+      
 
       </div>
     </>

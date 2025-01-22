@@ -9,7 +9,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
 
         
-       <div className="text-[35px] flex flex-row justify-between items-center gap-2">
+       <div className="text-[50px] flex flex-row justify-between items-center gap-2">
             <div className="flex flex-row items-center gap-2">
             <p className="text-[#424A5]">{productInfo.make}</p>
             </div>

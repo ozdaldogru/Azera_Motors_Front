@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
-
 const Hero = () => {
 
 
@@ -16,11 +13,11 @@ const Hero = () => {
 				<br />
 				<br />
 				<br />
-				<span className="text-red-300 font-bold lg:text-[63px] text-[52px] lg:text-left text-center">
+				<span className="text-red-300 font-bold lg:text-[63px] text-[52px] lg:text-left text-center animate-pulse">
 					Best Affordable Cars In Mississauga
 				</span>
 
-				<span className="text-red-300 font-bold lg:text-[50px] text-[52px] lg:text-left text-center">
+				<span className="text-red-300 font-bold lg:text-[50px] text-[52px] lg:text-left text-center animate-pulse">
 					Come and Get Yours Today
 				</span>
 
