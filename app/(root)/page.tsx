@@ -1,4 +1,3 @@
-
 import ProductList from "@/components/ProductList";
 import Hero from "@/components/hero";
 
@@ -11,9 +10,9 @@ export default function Home() {
         <div className="w-full">
         <Hero />
         </div>
-        
+       
        <div className="items-center justify-center"> 
-        <ProductList />
+        <ProductList/>
        </div>
       
 
