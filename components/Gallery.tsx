@@ -13,8 +13,8 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
   const [mainImage, setMainImage] = useState(productMedia[0]);
   const [index, setIndex] = useState<number>(-1);
   return (
-    <div className="flex flex-col gap-3 w-1280 h-720">
-      <div className="flex justify-center w-1280 h-720">
+    <div className="flex flex-col gap-3 w-1280">
+      <div className="flex justify-center w-1280 max-h-[720px]">
 
       <Lightbox
       open={index >= 0}

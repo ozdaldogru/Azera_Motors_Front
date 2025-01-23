@@ -7,10 +7,10 @@ const Title = ({ productInfo }: { productInfo: ProductType }) => {
 
 <div>
 
-  <div className="w-full text-[50px] mt-10 gap-16">
+  <div className="w-full text-[45px] mt-10 gap-16">
 
  
-        <h1>[{productInfo.status}] - {productInfo.title}</h1>
+        <h1>{productInfo.title}-({productInfo.status})</h1>
  
 
   </div>
