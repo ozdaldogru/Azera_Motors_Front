@@ -1,14 +1,13 @@
+
 import ProductList from "@/components/ProductList";
-import Hero from "@/components/hero";
-
-
+import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
     <>
       <div >
-        <div className="w-full">
-        <Hero />
+        <div className="">
+        <Slider />
         </div>
        
        <div className="items-center justify-center"> 
