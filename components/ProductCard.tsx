@@ -4,33 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-interface Product {
-  _id: string;
-  createdAt: string;
-  media: string[];
-  status: string;
-  title: string;
-  price: number;
-  categories: string;
-  year: number;
-  mileage: number;
-  engineSize: string;
-  fuelType: string;
-  transmission: string;
-  history: string;
-  lowmileage: string;
-  numberofowner: number;
-}
-
-const ProductCard = ({ product }: { product: Product }) => {
-
-
 interface ProductCardProps {
-  product: Product;
+  product: ProductType;
 }
 
-
-  const createdAtDate = new Date(product.createdAt);
+const ProductCard = ({ product }: ProductCardProps ) => {
   return (
     <>
     {product.status === "Archived" ? (""
@@ -126,12 +104,6 @@ interface ProductCardProps {
           <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md">{product.numberofowner} Owner</p>
           ) : ("")}
       </div>
-      <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#E4E4E4] py-4">
-
-            <p className="text-[#8F95A0] font-bold py-2 px-4 ">Added:{createdAtDate.toDateString()}</p>
-      </div>
-
-
     </Link>
 
     )}
@@ -142,5 +114,3 @@ interface ProductCardProps {
 
 
 export default ProductCard;
-
-//          
