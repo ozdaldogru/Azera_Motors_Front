@@ -38,7 +38,7 @@ const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   return (
-          <div className="bg-[#d4dce2] sticky top-0 ">
+          <div className="bg-[#d4dce2] ">
 
             <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-col  sm:items-center sm:gap-8">
 

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div >
-        <div className="w-full py-2 ">
+        <div className="w-full">
         <Hero />
         </div>
         
