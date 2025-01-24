@@ -1,6 +1,5 @@
 
 import ProductList from "@/components/ProductList";
-import Hero from "@/components/hero";
 
 
 
