@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[365px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#E4E4E4] p-2 shadow-lg hover:shadow-2xl rounded-md "
+      className="w-[365px] flex flex-col gap-2 bg-[#F5F5F5] border border-[#8F95A0] p-2 shadow-lg hover:shadow-2xl rounded-md "
     >
             <div
               className="w-full h-[300px] bg-center bg-cover relative rounded-md"
@@ -53,7 +53,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       
 
 
-      <div className="flex flex-col gap-2 w-full border-b border-[#E4E4E4] py-4">
+      <div className="flex flex-col gap-2 w-full border-b border-[#8F95A0] py-4">
         <div className="flex flex-row justify-between items-center text-left text-[30px] gap-2 w-full ">
         <p className=" text-black">{product.title}</p>
         </div>
@@ -91,7 +91,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
        </div>
 
-      <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#E4E4E4] py-4">
+      <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
 
           {product.history === "" ? ("") : (  
           <Image src="/carfax.svg" alt="carfax car history logo" width={92} height={50} style={{ height: "auto" }}/>

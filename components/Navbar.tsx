@@ -64,12 +64,14 @@ const Navbar = () => {
                             className="px-4 py-2 rounded-l-md border border-gray-300"
                           />
                           <button
+                            id="search" aria-label="search button"
                             onClick={handleSearch}
                             className="px-4 py-3 bg-green-500 text-white border-gray-300 rounded-r-md"
                           >
                             <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
                           </button>
                           <button
+                            id="close-search" aria-label="close search button"
                             onClick={() => setIsSearchOpen(false)}
                             className="px-4 py-3 bg-[#8F95A0] text-white border-gray-300 rounded-r-md"
                           >
