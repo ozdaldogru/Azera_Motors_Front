@@ -39,9 +39,9 @@ const Navbar = () => {
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   return (
-          <div className="bg-[#d4dce2] ">
+          <>
 
-            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-col  sm:items-center sm:gap-8">
+            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row  sm:items-center sm:gap-8">
 
 
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
                <div className=" flex flex-col justify-center gap-4">   
 
-                <div className="max-[600px]:hidden flex flex-wrap justify-center gap-8 font-bold ">   
+                <div className="max-[600px]:hidden flex flex-wrap justify-center gap-8 font-bold text-[20px]">   
                 <div className="flex items-center justify-center">
                       {isSearchOpen ? (
                         <div className="flex items-center">
@@ -71,7 +71,7 @@ const Navbar = () => {
                           </button>
                           <button
                             onClick={() => setIsSearchOpen(false)}
-                            className="px-4 py-3 bg-red-500 text-white border-gray-300 rounded-r-md"
+                            className="px-4 py-3 bg-[#8F95A0] text-white border-gray-300 rounded-r-md"
                           >
                             <X className="cursor-pointer h-4 w-4 hover:text-red-1" />
                           </button>
@@ -79,13 +79,13 @@ const Navbar = () => {
                       ) : (
                         <button
                           onClick={() => setIsSearchOpen(true)}
-                          className="text-gray-500"
+                          className=""
                         >
                           <Search size={24} />
                         </button>
                       )}
                  </div>
-                    <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                    <a href="/inventory" className=" hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
                     <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
                     <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
                 </div>
@@ -98,9 +98,41 @@ const Navbar = () => {
                 {dropdownMenu && (
                   <div className="absolute top-10 right-6 flex flex-col gap-8 p-5 bg-white shadow-xl rounded-lg w-240">
               
-                          <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                           <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
                             <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
                             <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
+                            <div className="flex items-center justify-center">
+                      {isSearchOpen ? (
+                        <div className="flex items-center">
+                          <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search..."
+                            className="px-4 py-2 rounded-l-md border border-gray-300"
+                          />
+                          <button
+                            onClick={handleSearch}
+                            className="px-4 py-3 bg-green-500 text-white border-gray-300 rounded-r-md"
+                          >
+                            <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
+                          </button>
+                          <button
+                            onClick={() => setIsSearchOpen(false)}
+                            className="px-4 py-3 bg-[#8F95A0] text-white border-gray-300 rounded-r-md"
+                          >
+                            <X className="cursor-pointer h-4 w-4 hover:text-red-1" />
+                          </button>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => setIsSearchOpen(true)}
+                          className=""
+                        >
+                          <Search size={24} />
+                        </button>
+                      )}
+                 </div>
 
                   </div>
                 )}
@@ -111,7 +143,7 @@ const Navbar = () => {
 
             </div>
  
-           </div>
+           </>
    
 
   );
