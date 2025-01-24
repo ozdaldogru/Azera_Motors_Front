@@ -6,7 +6,6 @@ import {
   motion,
   useAnimation,
   useInView,
-
 } from "framer-motion"
 import { useEffect, useRef } from "react"
 
@@ -32,7 +31,6 @@ const ProductCard = ({ product }: ProductCardProps ) => {
     <>
           <section ref={containerRef}>
         <motion.h1
-      
           animate={mainControls}
           initial="hidden"
           variants={{
@@ -42,7 +40,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
               y: 0,
             },
           }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.5 }}
         >
           {product.status === "Archived" ? (""
 ) : (
