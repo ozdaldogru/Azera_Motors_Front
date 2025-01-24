@@ -13,7 +13,31 @@ export const images = [
     },
     {
       id: 3,
-      src: "/banner.png",
+      src: "/banner3.jpeg",
+      title: "Come and Visit Us",
+      title2: "And Get Your New Car Today",
+    },
+    {
+      id: 4,
+      src: "/banner4.jpeg",
+      title: "Come and Visit Us",
+      title2: "And Get Your New Car Today",
+    },
+    {
+      id: 5,
+      src: "/banner5.jpeg",
+      title: "Come and Visit Us",
+      title2: "And Get Your New Car Today",
+    },
+    {
+      id: 6,
+      src: "/banner6.jpeg",
+      title: "Come and Visit Us",
+      title2: "And Get Your New Car Today",
+    },
+    {
+      id: 7,
+      src: "/banner7.jpeg",
       title: "Come and Visit Us",
       title2: "And Get Your New Car Today",
     },
