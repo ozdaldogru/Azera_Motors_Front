@@ -10,7 +10,7 @@ export default function Home() {
         </div>
        
         <div className="items-center justify-center"> 
-          <ProductList limit={3} />
+          <ProductList />
         </div>
       </div>
     </>
