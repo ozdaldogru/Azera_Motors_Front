@@ -12,7 +12,7 @@ function Footer() {
            
               <ul className=" sm:text-[16px] flex flex-col px-02 md:text-[20px]">
                 <li className=" flex flex-col">
-                  <p className="text-green-900-bold transition " > Monday- Friday: </p>
+                  <p className="text-green-900-bold transition " > Monday- Saturday: </p>
                   <p className="text-green-900-bold transition  justify-right" > 09:00a.m.-08:00p.m. </p>
                 </li>
 

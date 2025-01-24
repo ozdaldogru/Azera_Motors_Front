@@ -7,23 +7,11 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
         <div className="text-[20px] justify-between py-2 gap-2 grid grid-cols-3 max-[960px]:grid-cols-2 max-[720px]:grid-cols-1"> 
 
-        <div className="flex flex-row items-center gap-2">
-        <p className="text-[#8F95A0]">Status:</p>
-        <p className="text-[#424A5]">{productInfo.status}</p>
-        </div>
-
-        <div className="flex flex-row items-center gap-2">
-        <p className="text-[#8F95A0]">Condition:</p>
-        <p className="text-[#424A5]">{productInfo.condition}</p>
-        </div>
-
 
         <div className="flex flex-row items-center gap-2">
         <p className="text-[#8F95A0]">Mileage:</p>
         <p className="text-[#424A5]">{productInfo.mileage} KM</p>
         </div>
-
-
 
         <div className="flex flex-row items-center gap-2">
         <p className="text-[#8F95A0]">Drive Type:</p>
@@ -35,10 +23,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-[#424A5]">{productInfo.fuelType}</p>
         </div>
 
-        <div className="flex flex-row items-center gap-2">
-        <p className="text-[#8F95A0]">Consumption:</p>
-        <p className="text-[#424A5]">{productInfo.consumption}</p>
-        </div>
+ 
 
         <div className="flex flex-row items-center gap-2">
         <p className="text-[#8F95A0]">Transmission:</p>
