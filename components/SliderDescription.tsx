@@ -24,20 +24,9 @@ const SliderDescription = ({ activeImage, clickNext, clickPrev }: Props) => {
           }`}
         >
           <motion.div
-            initial={{
-              opacity: idx === activeImage ? 0 : 0.5,
-              scale: idx === activeImage ? 0.5 : 0.3,
-            }}
-            animate={{
-              opacity: idx === activeImage ? 1 : 0.5,
-              scale: idx === activeImage ? 1 : 0.3,
-            }}
-            transition={{
-              ease: "linear",
-              duration: 1,
-              x: { duration: 1 },
-            }}
-            className="w-full"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 5, ease: "easeIn", delay: 0, repeat: Infinity, repeatDelay: 1}}
           >
             <p className="text-white text-[50px] text-center">{elem.title}</p>
             <p className="text-white text-[50px] text-center py8">{elem.title2}</p>

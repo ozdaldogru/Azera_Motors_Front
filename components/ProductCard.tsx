@@ -2,16 +2,49 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  motion,
+  useAnimation,
+  useInView,
 
+} from "framer-motion"
+import { useEffect, useRef } from "react"
 
 interface ProductCardProps {
   product: ProductType;
 }
 
 const ProductCard = ({ product }: ProductCardProps ) => {
+  const containerRef = useRef(null)
+
+  const isInView = useInView(containerRef, { once: true })
+  const mainControls = useAnimation()
+
+
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible")
+    }
+  }, [isInView, mainControls])
+
   return (
     <>
-    {product.status === "Archived" ? (""
+          <section ref={containerRef}>
+        <motion.h1
+      
+          animate={mainControls}
+          initial="hidden"
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: {
+              opacity: 1,
+              y: 0,
+            },
+          }}
+          transition={{ delay: 1 }}
+        >
+          {product.status === "Archived" ? (""
 ) : (
 
   <Link
@@ -107,6 +140,9 @@ const ProductCard = ({ product }: ProductCardProps ) => {
     </Link>
 
     )}
+        </motion.h1>
+
+      </section>
     </>
   );
 };
