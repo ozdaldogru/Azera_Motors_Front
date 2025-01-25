@@ -47,7 +47,7 @@ const Navbar = () => {
 
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
                     <Link href="/">
-                      <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }}/>
+                      <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }} className="max-[600px]:w-[250px]"/>
                     </Link>
                  </div>
 
@@ -120,12 +120,7 @@ const Navbar = () => {
                           >
                             <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
                           </button>
-                          <button
-                            onClick={() => setIsSearchOpen(false)}
-                            className="px-4 py-3 bg-[#8F95A0] text-white border-gray-300 rounded-r-md"
-                          >
-                            <X className="cursor-pointer h-4 w-4 hover:text-red-1" />
-                          </button>
+
                         </div>
                     </div>
 
