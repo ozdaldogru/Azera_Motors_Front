@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
           <>
 
-            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row">
+            <div className="bg-[#d4dce2] top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row">
 
 
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
@@ -93,13 +93,13 @@ const Navbar = () => {
                  <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
                 </div>
 
-                <div className="min-[601px]:hidden relative flex flex-col">
+                <div className="min-[601px]:hidden relative flex flex-col items-center justify-center gap-4">
                 <Menu
-                  className=" cursor-pointer items-center "
+                  className=" cursor-pointer items-center justify-center gap-4"
                   onClick={() => setDropdownMenu(!dropdownMenu)}
                 />
                 {dropdownMenu && (
-                  <div className="absolute top-16 right-1 flex flex-col gap-8 items-center p-3 bg-white overflow rounded-lg">
+                  <div className="absolute top-16 right-1 flex flex-col gap-8 items-center p-3 bg-white overflow rounded-lg items-center justify-center">
                             <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a>               
                             <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
                             <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
