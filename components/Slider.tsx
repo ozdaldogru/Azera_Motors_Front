@@ -28,9 +28,9 @@ const Slider = () => {
     };
   }, );
   return (
-    <main className="w-full lg:h-screen flex flex-col">
+    <main className="w-full lg:h-screen flex flex-col max-[431px]:h-[300px]">
       <div
-        className={`w-full h-[700px] bg-center bg-cover flex items-center justify-center flex-col lg:py-5 py-5`}
+        className={`w-full h-[700px] bg-center bg-cover flex items-center justify-center flex-col py-5`}
         style={{ 
           backgroundImage: `url(${images[activeImage].src})`
         }}

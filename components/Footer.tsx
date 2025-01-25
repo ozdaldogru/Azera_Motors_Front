@@ -4,14 +4,14 @@ function Footer() {
     return (
       <footer className="bg-[#d4dce2] flex flex-col justify-between items-center gap-10 py-8 px-5 object-fill">
         
-      <div className="flex flex-wrap justify-center gap-16">
+      <div className="flex flex-wrap justify-center gap-16 max-[431px]:gap-4">
 
-            <div className="gap-2 ">
+            <div className="">
 
-              <h2 className="text-[24px] text-bold px-02 gap-4  underline underline-offset-4 ">Operation Hours:</h2>
+              <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Operation Hours:</h2>
            
-              <ul className=" sm:text-[16px] flex flex-col px-02 md:text-[20px]">
-                <li className=" flex flex-col">
+              <ul className="flex flex-col px-02 px-4">
+                <li className="flex flex-col">
                   <p className="text-green-900-bold transition " > Monday- Saturday: </p>
                   <p className="text-green-900-bold transition  justify-right" > 09:00a.m.-08:00p.m. </p>
                 </li>
@@ -25,9 +25,9 @@ function Footer() {
 
             </div>
             <div>
-            <div className="flex flex-col justify-center">   
-                <h2 className=" text-[24px] flex flex-wrap justify-center px-20 gap-2 md:gap-8 lg:gap-2 text-[20px] text-bold underline underline-offset-4 mb-5">Contact Us:</h2>   
-                <div className="flex flex-col justify-center text-[19px]">   
+            <div className="flex flex-col ">   
+                <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Contact Us:</h2>   
+                <div className="flex flex-col justify-center text-[19px] max-[431px]:text-[15px]">   
                   <a href="tel:14375056334" className="text-center text-black  hover:text-green-700" target="blank">+1-437-505-63-34</a>    
                   <a href="mailto:info@azeramotors.ca" className="text-center text-black hover:text-red-700" target="blank">info@azeramotors.ca</a>
  

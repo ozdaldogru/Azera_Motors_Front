@@ -19,11 +19,12 @@ const Navbar = () => {
     }
   };
 
-  interface KeyPressEvent extends KeyboardEvent {
-    key: string;
-  }
+  const handleCombinedClick = () => {
+    handleSearch();
+    setDropdownMenu(!dropdownMenu)
+  };
 
-  const handleKeyPress = (event: KeyPressEvent) => {
+  const handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === "Enter") {
       handleSearch();
     }
@@ -41,7 +42,7 @@ const Navbar = () => {
   return (
           <>
 
-            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row  sm:items-center sm:gap-8">
+            <div className="bg-[#d4dce2] sticky top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row">
 
 
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
@@ -87,24 +88,24 @@ const Navbar = () => {
                         </button>
                       )}
                  </div>
-                    <a href="/inventory" className=" hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
-                    <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
-                    <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
+                 <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
+                 <a href="/inventory" className=" hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                 <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
                 </div>
 
-                <div className="min-[601px]:hidden relative flex gap-4 items-center">
+                <div className="min-[601px]:hidden relative flex flex-col">
                 <Menu
-                  className=" cursor-pointer "
+                  className=" cursor-pointer items-center "
                   onClick={() => setDropdownMenu(!dropdownMenu)}
                 />
                 {dropdownMenu && (
-                  <div className="absolute top-16 right-0 flex flex-col gap-2 p-3 px-2 bg-white shadow-xl rounded-lg w-240">
-              
-                           <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
+                  <div className="absolute top-16 right-1 flex flex-col gap-8 items-center p-3 bg-white rounded-lg">
+                            <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a>               
+                            <a href="/inventory" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Inventory</a>
                             <a href="/contact" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Contact</a>
-                            <a href="/" className="hover:font-bold  hover:underline hover:text-red-500 hover:border-primary transition-colors duration-500">Home</a> 
-                            <div className="flex items-center justify-center">
-                      {isSearchOpen ? (
+
+                    <div className="flex items-center justify-center">
+                      
                         <div className="flex items-center">
                           <input
                             type="text"
@@ -114,7 +115,7 @@ const Navbar = () => {
                             className="px-2 py-2 rounded-l-md border border-gray-300"
                           />
                           <button
-                            onClick={handleSearch}
+                            onClick={handleCombinedClick}
                             className="px-4 py-3 bg-green-500 text-white border-gray-300 rounded-r-md"
                           >
                             <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
@@ -126,15 +127,7 @@ const Navbar = () => {
                             <X className="cursor-pointer h-4 w-4 hover:text-red-1" />
                           </button>
                         </div>
-                      ) : (
-                        <button
-                          onClick={() => setIsSearchOpen(true)}
-                          className=""
-                        >
-                          <Search size={24} />
-                        </button>
-                      )}
-                 </div>
+                    </div>
 
                   </div>
                 )}
