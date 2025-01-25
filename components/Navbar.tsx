@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
           <>
 
-            <div className="bg-[#d4dce2] top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row">
+            <div className="bg-[#d4dce2]  top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row">
 
 
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
