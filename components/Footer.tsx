@@ -8,16 +8,16 @@ function Footer() {
 
             <div className="">
 
-              <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Operation Hours:</h2>
+              <h2 className=" text-[24px] justify-center gap-2 text-bold text-center underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Operation Hours:</h2>
            
               <ul className="flex flex-col px-02 px-4">
-                <li className="flex flex-col">
+                <li className=" flex flex-col text-center">
                   <p className="text-green-900-bold transition " > Monday- Saturday: </p>
                   <p className="text-green-900-bold transition  justify-right" > 09:00a.m.-08:00p.m. </p>
                 </li>
 
 
-                <li className=" flex flex-col">
+                <li className=" flex flex-col text-center">
                   <p className="text-green-900-bold transition "> Sunday: </p>
                   <p className="text-green-900-bold transition " > 09:00a.m.-03:00p.m. </p>
                 </li>
@@ -26,7 +26,7 @@ function Footer() {
             </div>
             <div>
             <div className="flex flex-col ">   
-                <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px]">Contact Us:</h2>   
+                <h2 className=" text-[24px] justify-center gap-2 text-bold underline underline-offset-4 mb-5 max-[431px]:text-[20px] text-center">Contact Us:</h2>   
                 <div className="flex flex-col justify-center text-[19px] max-[431px]:text-[15px]">   
                   <a href="tel:14375056334" className="text-center text-black  hover:text-green-700" target="blank">+1-437-505-63-34</a>    
                   <a href="mailto:info@azeramotors.ca" className="text-center text-black hover:text-red-700" target="blank">info@azeramotors.ca</a>

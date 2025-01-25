@@ -17,7 +17,7 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
 
 
             <div className="flex flex-wrap items-center flex flex-col gap-5 py-5 px-5">
-                <div className="flex justify-center md:gap-2 text-[24px] ">
+                <div className="flex justify-center md:gap-2 text-[24px] max-[431px]:text-[20px]">
                   <Title productInfo={productDetails} />
                 </div>
 
@@ -30,19 +30,19 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
                       </div>
 
                       <div className="flex flex-col gap-2  ">
-                        <h2 className=" text-[35px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Specifications</h2>
+                        <h2 className=" text-[35px] max-[431px]:text-[20px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Specifications</h2>
                         <Specifications productInfo={productDetails} />
                       </div>
 
                       <div className="flex flex-col gap-2  ">
-                        <h2 className=" text-[35px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Features</h2>
+                        <h2 className=" text-[35px] max-[431px]:text-[20px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Features</h2>
                         <div className="justify-between">
                         <Features productInfo={productDetails} />
                         </div>                        
                       </div>
 
                       <div className="text-center flex flex-col gap-2  ">
-                        <h2 className=" text-[35px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Description</h2>
+                        <h2 className=" text-[35px] max-[431px]:text-[20px] text-bold text-center py-2 border-b-2 border-[#E5E5E5] py-5">Description</h2>
                         <Description productInfo={productDetails} />
                      </div>
                 </div>

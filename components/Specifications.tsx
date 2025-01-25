@@ -5,7 +5,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
     return (
 
-        <div className="text-[20px] justify-between py-2 gap-2 grid grid-cols-3 max-[960px]:grid-cols-2 max-[720px]:grid-cols-1"> 
+        <div className="text-[20px] max-[431px]:text-[15px] justify-between py-2 gap-2 grid grid-cols-3 max-[960px]:grid-cols-2 max-[720px]:grid-cols-1"> 
 
 
         <div className="flex flex-row items-center gap-2">

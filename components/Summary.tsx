@@ -5,21 +5,21 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
     return (
 
-        <div className="flex flex-col "> 
+        <div className="flex flex-col border-t"> 
 
 
         
-       <div className="text-[50px] flex flex-row justify-between items-center gap-2 max-[564px]:flex-col">
+       <div className="text-[50px] max-[431px]:text-[30px] flex flex-row justify-between items-center gap-2 max-[564px]:flex-col">
             <div className="flex flex-row items-center gap-2">
             <p className="text-[#424A5]">{productInfo.make}</p>
             </div>
 
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-row items-center gap-2 max-[431px]:text-[25px]">
             <p className="text-[#6A7281]">${productInfo.price.toLocaleString()}</p>
             </div>
         </div>
 
-        <div className="text-[20px] flex flex-row gap-2 items-center gap-2 max-[564px]:justify-center">
+        <div className="text-[20px] flex flex-row gap-2 items-center gap-2 max-[564px]:justify-center max-[431px]:text-[15px]">
            
             <p className="text-[#8F95A0]">{productInfo.categories}</p>
            
