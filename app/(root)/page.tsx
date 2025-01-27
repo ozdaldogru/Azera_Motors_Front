@@ -1,5 +1,6 @@
 import ProductList from "@/components/ProductList";
 import Slider from "@/components/Slider";
+import CustomCookieConsent from "@/components/CustomCookieConsent";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="items-center justify-center">
           <ProductList />
         </div>
+        <CustomCookieConsent />
       </div>
     </>
   );
