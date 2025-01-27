@@ -104,23 +104,23 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
        </div>
 
-      <div className="flex flex-row text-center gap-2 w-full py-2 text-[#8F95A0] max-[431px]:text-[13px]">
-        <div className="flex flex-col items-center text-center gap-2 w-full ">
+      <div className="flex flex-row text-center w-full py-2 text-[#8F95A0] max-[431px]:text-[13px]">
+        <div className="flex flex-col items-center text-center w-full px-2">
         <Image src="/mileage.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="text-[#8F95A0]">{product.mileage.toLocaleString()}KM</p>
 
         </div>
-        <div className="flex flex-col items-center text-center gap-2 w-full text-[#8F95A0]">
+        <div className="flex flex-col items-center text-center w-full text-[#8F95A0]">
         <Image src="/engine.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.engineSize}</p>
 
         </div>
-        <div className="flex flex-col items-center text-center gap-2 w-full">
+        <div className="flex flex-col items-center text-center w-full">
         <Image src="/fueltype.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.fuelType}</p>
 
         </div>
-        <div className="flex flex-col items-center text-center gap-2 w-full">
+        <div className="flex flex-col items-center text-center w-full">
         <Image src="/drivetype.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.transmission}</p>
 

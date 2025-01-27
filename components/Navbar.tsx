@@ -24,16 +24,16 @@ const Navbar = () => {
      setIsOpen(!isOpen)
     };
           
-            const handleKeyPress = (event: KeyboardEvent) => {
-              if (event.key === "Enter") {
-                handleSearch();
-              }
-            };
+    const handleKeyPress = (event: KeyboardEvent) => {
+        if (event.key === "Enter") {
+          handleSearch();
+          }
+        };
           
-            useEffect(() => {
-              window.addEventListener("keydown", handleKeyPress);
-              return () => {
-                window.removeEventListener("keydown", handleKeyPress);
+        useEffect(() => {
+          window.addEventListener("keydown", handleKeyPress);
+            return () => {
+              window.removeEventListener("keydown", handleKeyPress);
               };
             }, [searchQuery]);
 
@@ -97,10 +97,10 @@ const Navbar = () => {
         </button>
         {isOpen && (
           
-        <div className='flex flex-col justify-between items-center text-center gap-3 basis-full '>
-            <Link href='/' className="w-[250px] shadow-sm rounded-md">Home</Link>
-            <Link href='/inventory' className="w-[250px] shadow-sm rounded-md">Inventory</Link>
-            <Link href='/contact' className="w-[250px] shadow-sm rounded-md">Contact</Link>
+        <div className='flex flex-col justify-between items-center text-center gap-3 basis-full' >
+            <Link href='/' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Home</Link>
+            <Link href='/inventory' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Inventory</Link>
+            <Link href='/contact' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Contact</Link>
             <div className="flex items-center justify-center">
                       
                       <div className="flex items-center">
