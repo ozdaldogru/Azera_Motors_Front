@@ -6,19 +6,25 @@ const ProductListFiltered = async () => {
 
   // Filter out products with "Archived" and "Pending" statuses
   const filteredProducts = products.filter(
-    (product: ProductType) => product.status !== "Archived" && product.status !== "Pending"
+    (product: ProductType) => product.status  );
+
+  // Sort products by creation date (assuming `createdAt` is a valid date field)
+  const sortedProducts = filteredProducts.sort(
+    (a: ProductType, b: ProductType) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );
 
-  return (
-    <div className="flex flex-col items-center gap-10 py-8 px-5">
-      
-      <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Inventory</p> 
+  // Get the latest 5 products
+  const latestProducts = sortedProducts.slice(0, 5);
 
-      {!filteredProducts || filteredProducts.length === 0 ? (
+  return (
+    <div className="flex flex-col items-center gap-10 py-8 px-5 bg-gray-100">
+      <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Inventory</p>
+
+      {!latestProducts || latestProducts.length === 0 ? (
         <p className="text-body-bold">No products found</p>
       ) : (
         <div className="flex flex-wrap justify-center gap-8">
-          {filteredProducts.map((product: ProductType) => (
+          {latestProducts.map((product: ProductType) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </div>
@@ -28,3 +34,4 @@ const ProductListFiltered = async () => {
 };
 
 export default ProductListFiltered;
+
