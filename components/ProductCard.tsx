@@ -42,8 +42,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
           }}
           transition={{ delay: 0.5 }}
         >
-          {product.status === "Archived" ? (""
-) : (
+
 
   <Link
       href={`/products/${product._id}`}
@@ -143,7 +142,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       </div>
     </Link>
 
-    )}
+    
         </motion.h1>
 
       </section>

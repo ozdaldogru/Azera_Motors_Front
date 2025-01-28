@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { images } from "./SliderConstants";
 import SliderDescription from "./SliderDescription";
