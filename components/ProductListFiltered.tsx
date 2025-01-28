@@ -17,8 +17,8 @@ const ProductListFiltered = async () => {
   const latestProducts = sortedProducts.slice(0, 5);
 
   return (
-    <div className="flex flex-col items-center gap-10 py-8 px-5 bg-gray-100">
-      <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Inventory</p>
+    <div className="flex flex-col items-center gap-10 py-8 px-5">
+      <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Recently Added</p>
 
       {!latestProducts || latestProducts.length === 0 ? (
         <p className="text-body-bold">No products found</p>
@@ -28,7 +28,9 @@ const ProductListFiltered = async () => {
             <ProductCard key={product._id} product={product} />
           ))}
         </div>
+        
       )}
+      <button className="bg-[#f5020d] text-white border-[#f5020d] text-heading1-bold border-[3px] rounded-md max-[431px]:text-[20px]"><a href="/inventory">Go To Inventory Page</a></button>
     </div>
   );
 };
