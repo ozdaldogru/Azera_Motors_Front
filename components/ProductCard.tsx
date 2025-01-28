@@ -46,7 +46,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[365px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md "
+      className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md "
     >
             <div
               className="w-full h-[300px] max-[431px]:h-[200px] bg-center bg-cover relative rounded-md"
@@ -103,7 +103,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
        </div>
 
-      <div className="flex flex-row text-center w-full py-2 text-[#8F95A0] max-[431px]:text-[13px]">
+      <div className="flex flex-row text-center w-full py-2 px-2 text-[#8F95A0] max-[431px]:text-[11px]">
         <div className="flex flex-col items-center text-center w-full px-2">
         <Image src="/mileage.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="text-[#8F95A0]">{product.mileage.toLocaleString()}KM</p>
