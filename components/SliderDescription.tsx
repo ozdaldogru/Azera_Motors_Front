@@ -28,7 +28,7 @@ const SliderDescription = ({ activeImage, clickNext, clickPrev }: Props) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 5, ease: "easeIn", delay: 0, repeat: Infinity, repeatDelay: 1}}
           >
-            <p className="text-white font-bold text-[60px] text-center max-[431px]:text-[20px] max-[431px]:font-bold">{elem.title}</p>
+            <p className="text-white font-bold text-[60px] text-center max-[431px]:text-[18px] max-[431px]:font-bold">{elem.title}</p>
 
           </motion.div>
 
