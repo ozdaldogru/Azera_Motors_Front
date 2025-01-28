@@ -30,7 +30,7 @@ const ProductListFiltered = async () => {
         </div>
         
       )}
-      <button className="bg-[#f5020d] text-white border-[#f5020d] text-heading1-bold border-[3px] rounded-md max-[431px]:text-[20px]"><a href="/inventory">Go To Inventory Page</a></button>
+      <button className="bg-black text-white text-[30px] px-8 max-[431px]:text-[20px]"><a href="/inventory">BROWSE ALL VEHICLES</a></button>
     </div>
   );
 };

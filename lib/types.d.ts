@@ -9,18 +9,16 @@ type FeatureType = {
 
 type ProductType = {
   _id: string;
-  title: string;
   make: string;
+  model: string;
   price: number;
   features: FeatureType[];
-  condition: string;
   numberofowner: number;
   year: number;
   mileage: number;
   lowmileage: string;
   driveType: string;
   fuelType: string;
-  consumption: number;
   transmission: string;
   engineSize: number;
   cylinder: number;

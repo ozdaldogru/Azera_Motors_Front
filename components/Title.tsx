@@ -10,7 +10,7 @@ const Title = ({ productInfo }: { productInfo: ProductType }) => {
   <div className="w-full text-[45px] mt-10 gap-16 max-[431px]:text-[30px]">
 
  
-        <h1>{productInfo.title} ({productInfo.status})</h1>
+        <h1>{productInfo.make} {productInfo.model} - {productInfo.year} [{productInfo.status}]</h1>
  
 
   </div>

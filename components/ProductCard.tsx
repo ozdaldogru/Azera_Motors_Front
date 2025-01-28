@@ -86,15 +86,16 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       <div className="flex flex-col  w-full border-b border-[#8F95A0]">
 
 
-        <div className="flex flex-col w-full py-2 max-[431px]:flex-row max-[431px]:items-center px-4">
-        <div className="flex flex-row justify-between items-center text-left text-[30px] max-[431px]:text-[20px] w-full ">
-        <p className=" text-black">{product.title}</p>
+        <div className="flex flex-row w-full items-center py-2 max-[431px]:flex-row max-[431px]:flex-col max-[431px]:items-start px-4">
+        <div className="flex flex-row justify-between items-center text-left text-[25px] max-[431px]:flex-col max-[431px]:items-start max-[431px]:text-[20px] w-full ">
+        <p className=" text-black">{product.make} {product.model}</p>
         </div>
         <div >
         <p className="text-body-bold text-[#8F95A0] max-[431px]:text-[15px]">${product.price.toLocaleString()}</p>
         </div>
 
         </div>
+
         <div className="flex flex-row items-center w-full max-[431px]:text-[13px] px-4">
         <p className="text-[#8F95A0]">{product.categories}</p>
         <p className="text-[#8F95A0]">•</p>
