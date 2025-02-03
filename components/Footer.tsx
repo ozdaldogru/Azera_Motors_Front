@@ -60,7 +60,7 @@ function Footer() {
         
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/azeramotorsinc/"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:text-orange-700/75"
