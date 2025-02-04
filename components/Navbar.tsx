@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Search, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] =useState(false)    
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='bg-[#d4dce2]  top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row'>
+    <div className='bg-[#d4dce2] w-full top-0 flex flex-wrap flex-row justify-between items-center gap-4 p-4 max-[600px]:flex-row'>
                  <div className="flex gap-4 items-stretch sm:h-min-[88px] ">
                     <Link href="/">
                       <Image src="/logo.png" alt="logo" width={300} height={300} style={{ height: "auto" }} className="max-[600px]:w-[250px]"/>
