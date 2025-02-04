@@ -24,7 +24,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
             <p className="text-[#8F95A0]">{productInfo.categories}</p>
            
             
-            <p className="text-[#8F95A0]">•</p>
+            <p className="text-[#8F95A0]"> • </p>
            
             
             <p className="text-[#8F95A0]">{productInfo.year}</p>

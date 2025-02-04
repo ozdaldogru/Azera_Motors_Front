@@ -98,7 +98,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
         <div className="flex flex-row items-center w-full max-[431px]:text-[13px] px-4">
         <p className="text-[#8F95A0]">{product.categories}</p>
-        <p className="text-[#8F95A0]">•</p>
+        <p className="text-[#8F95A0]"> • </p>
         <p className="text-[#8F95A0]">{product.year}</p>
         </div>
 
