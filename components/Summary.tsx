@@ -20,12 +20,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
         </div>
 
         <div className="text-[20px] flex flex-row gap-2 items-center gap-2 max-[564px]:justify-center max-[431px]:text-[15px]">
-           
-            <p className="text-[#8F95A0]">{productInfo.categories}</p>
-           
-            
-            <p className="text-[#8F95A0]"> • </p>
-           
+   
             
             <p className="text-[#8F95A0]">{productInfo.year}</p>
             
