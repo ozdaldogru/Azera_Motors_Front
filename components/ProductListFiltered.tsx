@@ -1,12 +1,17 @@
 import { getProducts } from "@/lib/actions/actions";
 import ProductCard from "./ProductCard";
 
-const ProductListFiltered = async () => {
+interface ProductCardProps {
+  product: ProductType;
+}
+
+const ProductListFiltered = async ({ product }: ProductCardProps ) => {
   const products = await getProducts();
 
   // Filter out products with "Archived" and "Pending" statuses
   const filteredProducts = products.filter(
-    (product: ProductType) => product.status  );
+    (product: ProductType) => !["Archived", "Sold Out", "Pending"].includes(product.status)
+  );
 
   // Sort products by creation date (assuming `createdAt` is a valid date field)
   const sortedProducts = filteredProducts.sort(
@@ -17,6 +22,9 @@ const ProductListFiltered = async () => {
   const latestProducts = sortedProducts.slice(0, 6);
 
   return (
+
+
+    
     <div className="flex flex-col items-center gap-10 py-8 px-5">
       <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Recently Added</p>
 
