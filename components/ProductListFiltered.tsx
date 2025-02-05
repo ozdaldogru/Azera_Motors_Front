@@ -14,7 +14,7 @@ const ProductListFiltered = async () => {
   );
 
   // Get the latest 5 products
-  const latestProducts = sortedProducts.slice(0, 5);
+  const latestProducts = sortedProducts.slice(0, 6);
 
   return (
     <div className="flex flex-col items-center gap-10 py-8 px-5">
