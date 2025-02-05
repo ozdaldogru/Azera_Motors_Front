@@ -15,7 +15,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
             </div>
 
             <div className="flex flex-row items-center gap-2 max-[431px]:text-[25px]">
-            <p className="text-[#6A7281]">${productInfo.price.toLocaleString()}</p>
+            <p className="text-[#6A7281]">${productInfo.price.toLocaleString()} + HST + Licensing</p>
             </div>
         </div>
 
