@@ -86,12 +86,13 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       <div className="flex flex-col  w-full border-b border-[#8F95A0]">
 
 
-        <div className="flex flex-row w-full items-center py-2 max-[431px]:flex-row max-[431px]:flex-col max-[431px]:items-start px-4">
-        <div className="flex flex-row justify-between items-center text-left text-[25px] max-[431px]:flex-col max-[431px]:items-start max-[431px]:text-[20px] w-full ">
+        <div className="flex flex-col w-full py-2 max-[431px]:flex-row max-[431px]:flex-col max-[431px]:items-start px-4">
+        <div className="flex flex-row justify-between py-2 text-left text-[20px] max-[431px]:flex-col max-[431px]:items-start max-[431px]:text-[20px] w-full ">
         <p className=" text-black">{product.make} {product.model}</p>
         </div>
-        <div >
+        <div className="flex flex-col" >
         <p className="text-body-bold text-[#8F95A0] max-[431px]:text-[15px]">${product.price.toLocaleString()}</p>
+        <p className="text-[8px] text-[#8F95A0] max-[431px]:text-[8px]">+ HST & Licensing</p>
         </div>
 
         </div>
