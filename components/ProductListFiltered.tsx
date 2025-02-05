@@ -5,7 +5,7 @@ interface ProductCardProps {
   product: ProductType;
 }
 
-const ProductListFiltered = async ({ product }: ProductCardProps ) => {
+const ProductListFiltered = async () => {
   const products = await getProducts();
 
   // Filter out products with "Archived" and "Pending" statuses
