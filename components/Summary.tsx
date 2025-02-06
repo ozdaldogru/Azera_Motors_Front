@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
+const Summary = ({ productInfo }: { productInfo: ProductType }) => {
 
 
     return (
@@ -47,4 +47,4 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
         </div>
     )}
 
-    export default Specifications;
+    export default Summary;

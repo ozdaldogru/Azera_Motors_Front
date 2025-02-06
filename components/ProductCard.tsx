@@ -131,7 +131,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
       <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
 
-          {product.history === "" ? ("") : (  
+          {product.history   === '' ? ("") : (  
           <Image src="/carfax.svg" alt="carfax car history logo" width={92} height={50} style={{ height: "auto" }} className="max-[431px]:w-[66px]"/>
           )}
           {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
