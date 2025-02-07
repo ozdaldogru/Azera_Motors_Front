@@ -7,12 +7,11 @@ export default function Home() {
   return (
     <>
       <div>
-        <div className="w-full gap-4" >
+        <div className="w-full" >
           <Slider />
         </div>
         <br />
-        <br />
-        <div className="items-center justify-center py-4 grid grid-col-3">
+        <div className="items-center justify-center grid grid-col-3">
           <ProductListFiltered />
         </div>
         <CustomCookieConsent />
