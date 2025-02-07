@@ -11,7 +11,8 @@ export default function Home() {
           <Slider />
         </div>
         <br />
-        <div className="items-center justify-center grid grid-col-3">
+        <br />
+        <div className="items-center justify-center py-4 grid grid-col-3">
           <ProductListFiltered />
         </div>
         <CustomCookieConsent />
