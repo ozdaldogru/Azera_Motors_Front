@@ -22,7 +22,10 @@ export default function RootLayout({ children,}: Readonly<{ children: React.Reac
       <body className={inter.className}>
         <ClerkProvider>
           <ToasterProvider />
+          <div className="w-full gap-4">
           <Navbar />
+          </div>
+
             {children}
           <Footer />
         </ClerkProvider>
