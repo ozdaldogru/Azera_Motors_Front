@@ -10,6 +10,8 @@ export default function Home() {
         <div className="w-full gap-4" >
           <Slider />
         </div>
+        <br />
+        <br />
         <div className="items-center justify-center py-4 grid grid-col-3">
           <ProductListFiltered />
         </div>
