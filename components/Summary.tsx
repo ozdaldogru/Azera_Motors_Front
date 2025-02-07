@@ -29,7 +29,8 @@ const Summary = ({ productInfo }: { productInfo: ProductType }) => {
         <div className="flex flex-row justify-between text-center gap-2 w-full py-2 max-[564px]:items-center max-[564px]:flex-col">
 
                 {productInfo.history === "" ? ("") : (  
-               <Image src="/carfax.svg" alt="carfax car history logo" width={115} height={50} style={{ height: "auto" }}/>
+                    <a href={productInfo.history}><Image src="/carfax.svg" alt="carfax car history logo" width={115} height={50} style={{ height: "auto" }}/></a>
+               
                 
                 )}
                 {productInfo.lowmileage === "Yes" || productInfo.lowmileage === "yes" ? (
