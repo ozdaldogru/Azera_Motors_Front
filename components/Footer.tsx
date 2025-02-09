@@ -90,8 +90,9 @@ function Footer() {
 
       </div>
 
-          <div className=" flex justify-center py-4">
-            <p >All Rights Reserved  &copy; Azera Motors</p>
+          <div className=" flex flex-col justify-center text-center py-4">
+            <p className="border-b-2">All Rights Reserved  &copy; Azera Motors</p>
+            <p >Developed by Ozdal Dogru</p>
          </div>
   
     </footer>
