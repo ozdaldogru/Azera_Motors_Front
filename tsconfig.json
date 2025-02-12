@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/Features.tsx", "components/FeatureInfo.js", "components/FeatureInfo.js", "components/map/MapComponent.js", "components/Navbar2.jsx"  ],
+, "components/Features.tsx", "components/FeatureInfo.js", "components/FeatureInfo.js", "components/map/MapComponent.js", "components/Navbar2.jsx", "tailwind.config.js"  ],
   "exclude": [
     "node_modules"
   ]
