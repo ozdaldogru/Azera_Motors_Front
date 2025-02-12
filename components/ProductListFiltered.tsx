@@ -25,8 +25,8 @@ const ProductListFiltered = async () => {
 
 
     
-    <div className="flex flex-col items-center gap-10 py-8 px-5">
-      <p className="text-heading1-bold border-b-[3px] border-black max-[431px]:text-[20px]">Recently Added</p>
+    <div className="flex flex-col items-center py-6 gap-10">
+      <p className="text-[35px] text-heading1-bold border-b-[3px] py-6 border-black max-[431px]:text-[20px]">Recently Added</p>
 
       {!latestProducts || latestProducts.length === 0 ? (
         <p className="text-body-bold">No products found</p>

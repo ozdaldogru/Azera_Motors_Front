@@ -56,12 +56,12 @@ const Navbar = () => {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Search..."
-                            className="px-4 py-2 rounded-l-md border border-gray-300 text-[15px]"
+                            className="bg-[#ffffff] px-4 py-2 rounded-l-md border border-gray-300 text-[15px]"
                           />
                           <button
                             id="search" aria-label="search button"
                             onClick={handleSearch}
-                            className="px-4 py-3 bg-green-500 text-white border-gray-300 rounded-r-md "
+                            className="px-4 py-3 bg-green-500 text-white-100 border-gray-300 rounded-r-md "
                           >
                             <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
                           </button>
