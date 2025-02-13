@@ -13,8 +13,8 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
   const [mainImage, setMainImage] = useState(productMedia[0]);
   const [index, setIndex] = useState<number>(-1);
   return (
-    <div className="flex flex-col gap-3 w-[1280px]">
-      <div className="flex justify-center w-[1280] max-h-[720px]">
+    <div className="w-full flex flex-col gap-3 w-[1280px]">
+      <div className="flex justify-center max-w-[1280] max-h-[720px] ">
 
       <Lightbox
       open={index >= 0}
@@ -31,7 +31,7 @@ const Gallery = ({ productMedia }: { productMedia: string[] }) => {
         width={1280}
         height={720}
         alt="product image"
-        className="w-[1280px] h-[720px] rounded-lg cursor-pointer shadow-xl object-cover"
+        className="flex flex-wrap flex-col w-[1280px] h-[720px] rounded-lg cursor-pointer shadow-xl object-cover max-[431px]:w-[431px] max-[431px]:h-[300px]"
         onClick={() => setIndex(0)} 
       />
       </div>

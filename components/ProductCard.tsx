@@ -29,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   return (
     <>
-          <section ref={containerRef}>
+      <section ref={containerRef}>
         <motion.h1
           animate={mainControls}
           initial="hidden"
@@ -53,7 +53,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
               style={{ backgroundImage: `url(${product.media[0]})` }}
             >
 
-              <span className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center text-[30px] max-[431px]:text-[20px] rounded-md">
+              <span className="absolute bottom-0 left-0 w-full bg-black opacity-50 text-white text-center text-[30px] max-[431px]:text-[20px] rounded-md">
                       {product.status === "Pending" ? (
                   
                         <p className="text-orange-500 text-bold " >{product.status}</p>

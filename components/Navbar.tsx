@@ -63,14 +63,14 @@ const Navbar = () => {
                             onClick={handleSearch}
                             className="px-4 py-3 bg-green-500 text-white-100 border-gray-300 rounded-r-md "
                           >
-                            <Search className="cursor-pointer h-4 w-4 hover:text-red-1" />
+                            <Search className="cursor-pointer text-[20px] h-[15px] w-[15px] hover:text-red-500" />
                           </button>
                           <button
                             id="close-search" aria-label="close search button"
                             onClick={() => setIsSearchOpen(false)}
                             className="px-4 py-3 bg-[#8F95A0] text-white border-gray-300 rounded-r-md"
                           >
-                            <X className="cursor-pointer h-4 w-4 hover:text-red-1" />
+                            <X className="cursor-pointer h-[15px] w-[15px] hover:text-red-1 h-[15px]" />
                           </button>
                         </div>
                       ) : (
@@ -109,13 +109,13 @@ const Navbar = () => {
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           placeholder="Search..."
-                          className="px-2 py-2 rounded-l-md border border-gray-300  w-[200px] h-[30px]"
+                          className="bg-[#ffffff] px-2 py-2 rounded-l-md border border-gray-300 w-[208px] h-[30px]"
                         />
                         <button
                           onClick={handleCombinedClick}
-                          className="px-4 py-2 bg-green-500 text-white border-gray-300 rounded-r-md h-[30px] items-center justify-center text-center"
+                          className="px-4 py-2 bg-green-500 text-white text-center text-[30px] border-gray-300 rounded-r-md h-[30px] items-center justify-center"
                         >
-                          <Search className="cursor-pointer items-center h-4 w-4 hover:text-red-1" />
+                          <Search className="cursor-pointer items-center h-[15px] w-[15px] hover:text-red-1" />
                         </button>
 
                       </div>
