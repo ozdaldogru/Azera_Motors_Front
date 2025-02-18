@@ -1,13 +1,9 @@
-
 import ProductList from "@/components/ProductList";
-
-
 
 export default function Home() {
   return (
     <>
-      <div >
-       
+      <div className="flex flex-col items-center py-6 gap-10">
       <ProductList />
 
       </div>
