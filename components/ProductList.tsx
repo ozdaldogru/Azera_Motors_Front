@@ -4,9 +4,9 @@ import ProductCard from "./ProductCard";
 const ProductList = async () => {
   const products = await getProducts();
 
-  // Sort products by status: "On Sale", "Pending", "Sold Out", "Archived"
+  // Sort products by status: "Available", "Pending", "Sold", "Archived"
   const sortedProducts = products.sort((a: ProductType, b: ProductType) => {
-    const statusOrder = ["On Sale", "Pending", "Sold Out", "Archived"];
+    const statusOrder = ["Available", "Pending", "Sold", "Archived"];
     return statusOrder.indexOf(a.status) - statusOrder.indexOf(b.status);
   });
 

@@ -66,7 +66,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
                        
                   ) : (
                       
-                    product.status === "Sold Out"  ? (
+                    product.status === "Sold"  ? (
                       
                           <p className="text-red-500 text-bold" >{product.status}</p>
                     

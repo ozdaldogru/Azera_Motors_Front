@@ -10,7 +10,7 @@ const ProductListFiltered = async () => {
 
   // Filter out products with "Archived" and "Pending" statuses
   const filteredProducts = products.filter(
-    (product: ProductType) => !["Archived", "Sold Out", "Pending"].includes(product.status)
+    (product: ProductType) => !["Archived", "Sold", "Pending"].includes(product.status)
   );
 
   // Sort products by creation date (assuming `createdAt` is a valid date field)
