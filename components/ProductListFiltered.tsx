@@ -38,7 +38,7 @@ const ProductListFiltered = async () => {
         </div>
         
       )}
-      <button className="bg-black text-white text-[30px] px-8 max-[431px]:text-[20px]"><a href="/inventory">BROWSE ALL VEHICLES</a></button>
+      <button className="bg-black text-white text-[30px] px-8 max-[431px]:text-[20px] max-[431px]:w-[360px] rounded-md"><a href="/inventory">BROWSE ALL VEHICLES</a></button>
     </div>
   );
 };
