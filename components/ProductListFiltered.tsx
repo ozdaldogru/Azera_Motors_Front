@@ -19,7 +19,7 @@ const ProductListFiltered = async () => {
   );
 
   // Get the latest 5 products
-  const latestProducts = sortedProducts.slice(0, 6);
+  const latestProducts = sortedProducts.slice(0, 9);
 
   return (
 
