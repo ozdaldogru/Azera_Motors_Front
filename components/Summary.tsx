@@ -10,8 +10,9 @@ const Summary = ({ productInfo }: { productInfo: ProductType }) => {
 
         
        <div className=" flex flex-row justify-between items-center gap-2 max-[975px]:flex-col max-[975px]:justify-center ">
-            <div className="flex flex-row items-center gap-2 text-[50px] max-[450px]:text-[45px] max-[410px]:text-[40px] max-[369px]:text-[35px]">
-            <p className="text-[#424A5]">{productInfo.make} {productInfo.model}</p>
+            <div className="flex flex-row items-center text-[50px] max-[975px]:flex-col max-[450px]:text-[45px] max-[410px]:text-[40px] max-[369px]:text-[35px]">
+            <p className="text-[#424A5]">{productInfo.make}</p>
+            <p className="text-[#424A5]"> {productInfo.model}</p>
             </div>
 
             <div className="flex flex-row items-center gap-2 text-[45px] max-[450px]:text-[35px] max-[369px]:text-[32px] max-[431px]:flex-col text-[#6A7281]">
