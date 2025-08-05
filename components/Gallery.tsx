@@ -47,7 +47,7 @@ const handleNext = () => {
                     />
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 bg-black text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+              className="absolute left-4 top-1/2 text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
               aria-label="Previous image"
             >
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ const handleNext = () => {
             {/* Next Arrow */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 bg-black text-white -translate-y-1/2 bg-opacity-100 rounded-full p-3 hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+              className="absolute right-4 top-1/2 text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
               aria-label="Next image"
             >
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
