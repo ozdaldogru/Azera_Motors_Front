@@ -44,7 +44,7 @@ const Slider = () => {
         {/* Arrow Buttons */}
         <button
           onClick={clickPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black text-white bg-opacity-80 rounded-full p-2 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 text-white bg-opacity-80 rounded-full p-2 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
           aria-label="Previous image"
         >
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ const Slider = () => {
         </button>
         <button
           onClick={clickNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black text-white bg-opacity-80 rounded-full p-2 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 text-white bg-opacity-80 rounded-full p-2 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
           aria-label="Next image"
         >
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
