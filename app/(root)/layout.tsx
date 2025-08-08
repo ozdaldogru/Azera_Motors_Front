@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -6,8 +5,6 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ToasterProvider from "@/lib/providers/ToasterProvider";
-import Head from "next/head";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,19 +13,14 @@ export const metadata: Metadata = {
   description: "Azera Motors Car Dealer",
 };
 
-export default function RootLayout({ children,}: Readonly<{ children: React.ReactNode;}>) {
-
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ClerkProvider>
-          <ToasterProvider />
-          <div className="w-full gap-4">
-          <Navbar />
-          </div>
-
-                <Head>
-        <script async src={process.env.YOUR_GOOGLE_TAG_SCRIPT_URL}></script>
+      <head>
+        {/* Google Analytics Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD6CDE1XEZ"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -39,13 +31,17 @@ export default function RootLayout({ children,}: Readonly<{ children: React.Reac
             `,
           }}
         />
-      </Head>
-
-            {children}
+      </head>
+      <body className={inter.className}>
+        <ClerkProvider>
+          <ToasterProvider />
+          <div className="w-full gap-4">
+            <Navbar />
+          </div>
+          {children}
           <Footer />
         </ClerkProvider>
       </body>
     </html>
   );
-  
 }
