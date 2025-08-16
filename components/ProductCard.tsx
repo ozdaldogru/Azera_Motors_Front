@@ -129,19 +129,22 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
        </div>
 
-      <div className="flex flex-row justify-center items-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
-
-          {product.history   === '' ? ("") : (  
-          <Image src="/carfax.svg" alt="carfax car history logo" width={92} height={50} style={{ height: "auto" }} className="max-[431px]:w-[66px]"/>
-          )}
-          {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
-          <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">Low Mileage</p>
-          ) : ("")}
-
-          {product.numberofowner === 1 || product.numberofowner < 2 ? (
-          <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">{product.numberofowner} Owner</p>
-          ) : ("")}
-      </div>
+      <div className="flex flex-row justify-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
+  <Image
+    src="/carfax.svg"
+    alt="carfax car history logo"
+    width={92}
+    height={50}
+    style={{ height: "auto", opacity: product.history === '' ? 0 : 1 }}
+    className="max-[431px]:w-[66px]"
+  />
+  {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
+    <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">Low Mileage</p>
+  ) : ("")}
+  {product.numberofowner === 1 || product.numberofowner < 2 ? (
+    <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">{product.numberofowner} Owner</p>
+  ) : ("")}
+</div>
     </Link>
 
     

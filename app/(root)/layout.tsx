@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import Script from "next/script";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,26 +19,22 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Analytics Tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD6CDE1XEZ"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-ZD6CDE1XEZ');
-            `,
-          }}
-        />
-      </head>
       <body className={inter.className}>
+        <Script
+          src={process.env.YOUR_GOOGLE_TAG_SCRIPT_URL}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZD6CDE1XEZ');
+          `}
+        </Script>
         <ClerkProvider>
           <ToasterProvider />
-          <div className="w-full gap-4">
-            <Navbar />
-          </div>
+          <Navbar />
           {children}
           <Footer />
         </ClerkProvider>
