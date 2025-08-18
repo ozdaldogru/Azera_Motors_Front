@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const Summary = ({ productInfo }: { productInfo: ProductType }) => {
+
   return (
     <div className="flex flex-col border-t min-h-[250px]">
       <div className=" flex flex-row justify-between items-center gap-2 max-[975px]:flex-col max-[975px]:justify-center ">
@@ -19,34 +20,22 @@ const Summary = ({ productInfo }: { productInfo: ProductType }) => {
         <p className="text-[#8F95A0]">{productInfo.year}</p>
       </div>
 
-      <div className="flex flex-row gap-4 items-center min-h-[50px]">
-        {Array.isArray(productInfo.history) && productInfo.history[0] ? (
-          <a
-            href={productInfo.history[0]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center"
-          >
-            <Image
-              src="/carfax.svg"
-              alt="carfax car history logo"
-              width={115}
-              height={50}
-              style={{ width: "115px", height: "auto" }}
-            />
-          </a>
-        ) : (
-          <div style={{ width: "115px", height: "50px" }} />
-        )}
+        <div className="text-[20px] flex flex-row gap-4 items-center gap-4 max-[975px]:flex-col max-[564px]:justify-center max-[431px]:text-[15px]">
 
-        {productInfo.lowmileage === "Yes" || productInfo.lowmileage === "yes" ? (
-          <button className="bg-[#8F95A0] w-[115px] text-white py-2 px-4 border rounded">Low KM</button>
-        ) : null}
+                {productInfo.history === "" ? ("") : (  
+                    <a href={productInfo.history}><Image src="/carfax.svg" alt="carfax car history logo" width={115} height={50} style={{ height: "auto" }}/></a>
 
-        {productInfo.numberofowner === 1 || productInfo.numberofowner < 2 ? (
-          <button className="bg-[#8F95A0] w-[115px] text-white py-2 px-4 border rounded">{productInfo.numberofowner} Owner</button>
-        ) : null}
-      </div>
+
+                )}
+                {productInfo.lowmileage === "Yes" || productInfo.lowmileage === "yes" ? (
+                <button className="bg-[#8F95A0]  w-[115px] text-white py-2 px-4 border rounded">Low KM</button>
+                ) : ("")}
+
+                {productInfo.numberofowner === 1 || productInfo.numberofowner < 2 ? (
+                <button className="bg-[#8F95A0] w-[115px] text-white py-2 px-4 border  rounded">{productInfo.numberofowner} Owner</button>
+                ) : ("")}
+
+        </div>
     </div>
   );
 };
