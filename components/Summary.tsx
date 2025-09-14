@@ -23,7 +23,7 @@ const Summary = ({ productInfo }: { productInfo: ProductType }) => {
         <div className="text-[20px] flex flex-row gap-4 items-center gap-4 max-[975px]:flex-col max-[564px]:justify-center max-[431px]:text-[15px]">
 
                 {productInfo.history === "" ? ("") : (  
-                    <a href={productInfo.history}><Image src="/carfax.svg" alt="carfax car history logo" width={115} height={50} style={{ height: "auto" }}/></a>
+                    <a href={productInfo.history}><Image src="/carfax.webp" alt="carfax car history logo" width={115} height={50} style={{ height: "auto" }}/></a>
 
 
                 )}

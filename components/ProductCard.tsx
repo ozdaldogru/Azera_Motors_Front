@@ -131,7 +131,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
       <div className="flex flex-row justify-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
   <Image
-    src="/carfax.svg"
+    src="/carfax.webp"
     alt="carfax car history logo"
     width={92}
     height={50}

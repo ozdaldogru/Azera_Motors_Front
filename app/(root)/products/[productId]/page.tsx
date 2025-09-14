@@ -6,11 +6,10 @@ import Summary from "@/components/Summary";
 import Title from "@/components/Title";
 import Description from "@/components/Description";
 import Features from "@/components/Features";
-import Slider from "@/components/Slider";
-import ProductListFiltered from "@/components/ProductListFiltered";
-import CustomCookieConsent from "@/components/CustomCookieConsent";
-import Script from "next/script";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+
+const CustomCookieConsent = dynamic(() => import('@/components/CustomCookieConsent'));
 
 const ProductDetails = async (props: { params: Promise<{ productId: string }>}) => {
   const params = await props.params;
@@ -48,5 +47,5 @@ const ProductDetails = async (props: { params: Promise<{ productId: string }>}) 
   );
 };
 
-export const dynamic = "force-dynamic";
+export const dynamicMode = "force-dynamic";
 export default ProductDetails;
