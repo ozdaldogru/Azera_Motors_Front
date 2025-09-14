@@ -48,36 +48,27 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       href={`/products/${product._id}`}
       className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md "
     >
-            <div
-              className="w-full h-[300px] max-[431px]:h-[200px] bg-center bg-cover relative rounded-md"
-              style={{ backgroundImage: `url(${product.media[0]})` }}
-            >
-
-              <span className="absolute bottom-0 left-0 w-full bg-black opacity-50 text-white text-center text-[30px] max-[431px]:text-[20px] rounded-md">
-                      {product.status === "Pending" ? (
-                  
-                        <p className="text-orange-500 text-bold " >{product.status}</p>
-               
-                      ) : (
-                      
-                      product.status === "Archived"  ? (
-                        
-                            <p className="text-blue-500 text-bold" >{product.status}</p>
-                       
-                  ) : (
-                      
-                    product.status === "Sold"  ? (
-                      
-                          <p className="text-red-500 text-bold" >{product.status}</p>
-                    
-                ) :
-                (
-                     <p className="text-green-500 text-bold" >{product.status}</p>
-                 )))
-                }
-              </span>
-
-		    	</div>
+      <div className="w-full h-[300px] max-[431px]:h-[200px] relative rounded overflow-hidden">
+        <Image
+          src={product.media[0]}
+          alt={`${product.make} ${product.model}`}
+          fill
+          priority // Only if this card is above the fold!
+          style={{ objectFit: "cover" }}
+          sizes="(max-width: 431px) 360px, 400px"
+        />
+        <span className="absolute bottom-0 left-0 w-full bg-black opacity-50 text-white text-center text-[30px] max-[431px]:text-[20px] rounded-md">
+          {product.status === "Pending" ? (
+            <p className="text-orange-500 text-bold">{product.status}</p>
+          ) : product.status === "Archived" ? (
+            <p className="text-blue-500 text-bold">{product.status}</p>
+          ) : product.status === "Sold" ? (
+            <p className="text-red-500 text-bold">{product.status}</p>
+          ) : (
+            <p className="text-green-500 text-bold">{product.status}</p>
+          )}
+        </span>
+      </div>
 
     
       
