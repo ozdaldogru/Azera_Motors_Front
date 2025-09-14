@@ -1,8 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { images } from "./SliderConstants";
-import SliderDescription from "./SliderDescription";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const images = [
+  {
+    id: 1,
+    src: "/banner.webp",
+    title: "Family-owned dealership excellence",
+  },
+  {
+    id: 2,
+    src: "/banner2.webp",
+    title: "Quality cars at unbeatable prices",
+  },
+  {
+    id: 3,
+    src: "/banner3.webp",
+    title: "Experience hassle-free car buying",
+  },
+  {
+    id: 4,
+    src: "/banner4.webp",
+    title: "We value your satisfaction always",
+  },
+];
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -26,21 +49,15 @@ const Slider = () => {
 
   return (
     <main className="w-full flex flex-col">
-      <div
-        className="
-          w-full
-          h-[500px]
-          max-[900px]:h-[350px]
-          max-[600px]:h-[260px]
-          max-[431px]:h-[200px]
-          bg-center bg-cover
-          flex items-center justify-center flex-col
-          relative
-        "
-        style={{
-          backgroundImage: `url(${images[activeImage].src})`
-        }}
-      >
+      <div className="w-full h-[500px] max-[900px]:h-[350px] max-[600px]:h-[260px] max-[431px]:h-[200px] flex items-center justify-center flex-col relative overflow-hidden">
+        <Image
+          src={images[activeImage].src}
+          alt={images[activeImage].title}
+          fill
+          priority={activeImage === 0}
+          style={{ objectFit: "cover", zIndex: 0 }}
+          sizes="100vw"
+        />
         {/* Arrow Buttons */}
         <button
           onClick={clickPrev}
@@ -48,8 +65,14 @@ const Slider = () => {
           aria-label="Previous image"
         >
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="12" fill="currentColor" opacity="0.1"/>
-            <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="12" r="12" fill="currentColor" opacity="0.1" />
+            <path
+              d="M15 6l-6 6 6 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
         <button
@@ -58,15 +81,47 @@ const Slider = () => {
           aria-label="Next image"
         >
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="12" fill="currentColor" opacity="0.1"/>
-            <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="12" r="12" fill="currentColor" opacity="0.1" />
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
-        <SliderDescription
-          activeImage={activeImage}
-          clickNext={clickNext}
-          clickPrev={clickPrev}
-        />
+        {/* Animated Description */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 w-full">
+          <motion.div
+            key={activeImage}
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <p className="text-white font-bold text-[60px] text-center max-[450px]:text-[18px] max-[450px]:font-bold">
+              {images[activeImage].title}
+            </p>
+          </motion.div>
+          <div className="flex gap-2 mt-3">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() =>
+                  idx < activeImage
+                    ? clickPrev()
+                    : idx > activeImage
+                    ? clickNext()
+                    : undefined
+                }
+                className={`w-3 h-3 rounded-full ${
+                  activeImage === idx ? "bg-white" : "bg-gray-400"
+                } border border-white`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );
