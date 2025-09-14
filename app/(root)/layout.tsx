@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 import Script from "next/script";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
@@ -32,12 +31,12 @@ export default function RootLayout({
             gtag('config', 'G-ZD6CDE1XEZ');
           `}
         </Script>
-        <ClerkProvider>
+
           <ToasterProvider />
           <Navbar />
           {children}
           <Footer />
-        </ClerkProvider>
+
       </body>
     </html>
   );

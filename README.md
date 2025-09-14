@@ -17,9 +17,6 @@ Create a `.env` file in the root directory and fill in the following details:
 ```env
 MONGODB_URL=
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-
 ADMIN_DASHBOARD_URL=
 NEXT_PUBLIC_API_URL={ADMIN_DASHBOARD_URL}/api
 
@@ -80,7 +77,6 @@ This project uses the following technologies:
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
 - [MongoDB](https://www.mongodb.com/) - A document-oriented NoSQL database
-- [Clerk](https://clerk.dev/) - Authentication and user management for modern applications
 - [Google Maps API](https://developers.google.com/maps) - A set of APIs for integrating Google Maps into your applications
 
 ## Learn More
