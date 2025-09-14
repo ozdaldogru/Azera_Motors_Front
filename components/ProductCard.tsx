@@ -107,22 +107,22 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
       <div className="flex flex-row text-center w-full py-2 px-2 text-[#8F95A0] max-[431px]:text-[11px]">
         <div className="flex flex-col items-center text-center w-full px-2">
-        <Image src="/mileage.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
+        <Image src="/mileage.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="text-[#8F95A0]">{product.mileage.toLocaleString()}KM</p>
 
         </div>
         <div className="flex flex-col items-center text-center w-full text-[#8F95A0]">
-        <Image src="/engine.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
+        <Image src="/engine.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.engineSize}</p>
 
         </div>
         <div className="flex flex-col items-center text-center w-full">
-        <Image src="/fueltype.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
+        <Image src="/fueltype.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.fuelType}</p>
 
         </div>
         <div className="flex flex-col items-center text-center w-full">
-        <Image src="/drivetype.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
+        <Image src="/drivetype.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.transmission}</p>
 
         </div>

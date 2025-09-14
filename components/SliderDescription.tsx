@@ -1,9 +1,7 @@
 import React from "react";
 import { images } from "./SliderConstants";
-import left from "../public/left.svg";
-import right from "../public/right.svg";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 
 type Props = {
   activeImage: any;
