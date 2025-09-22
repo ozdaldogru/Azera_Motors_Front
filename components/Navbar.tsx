@@ -111,12 +111,13 @@ const Navbar = () => {
                           placeholder="Search..."
                           className="bg-[#ffffff] px-2 py-2 rounded-l-md border border-gray-300 w-[208px] h-[30px]"
                         />
-                        <button
-                          onClick={handleCombinedClick}
-                          className="px-4 py-2 bg-green-500 text-white text-center text-[30px] border-gray-300 rounded-r-md h-[30px] items-center justify-center"
-                        >
-                          <Search className="cursor-pointer items-center h-[15px] w-[15px] hover:text-red-1" />
-                        </button>
+                          <button
+                            id="search" aria-label="search button"
+                            onClick={handleSearch}
+                            className="px-4 py-1 bg-green-500 text-white-100 border border-gray-300 rounded-r-md hover:bg-red-500 h-[30px]"
+                          >
+                            <Search className="cursor-pointer text-[20px] h-[15px] w-[15px]" />
+                          </button>
 
                       </div>
             </div>
