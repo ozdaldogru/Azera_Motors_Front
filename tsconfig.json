@@ -14,7 +14,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -32,8 +32,15 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "components/Features.tsx", "components/FeatureInfo.js", "components/FeatureInfo.js", "components/map/MapComponent.js", "components/Navbar2.jsx", "tailwind.config.js"  ],
+    ".next/types/**/*.ts",
+    "components/Features.tsx",
+    "components/FeatureInfo.js",
+    "components/FeatureInfo.js",
+    "components/map/MapComponent.js",
+    "components/Navbar2.jsx",
+    "tailwind.config.js",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
