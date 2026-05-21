@@ -107,17 +107,18 @@ const Slider = () => {
             {images.map((_, idx) => (
               <button
                 key={idx}
-                onClick={() =>
-                  idx < activeImage
-                    ? clickPrev()
-                    : idx > activeImage
-                    ? clickNext()
-                    : undefined
-                }
-                className={`w-3 h-3 rounded-full ${
-                  activeImage === idx ? "bg-white" : "bg-gray-400"
-                } border border-white`}
+                onClick={() => setActiveImage(idx)}
+                className={`transition-all duration-200 border border-white focus:outline-none 
+                  ${activeImage === idx 
+                    ? "bg-white w-8 h-4 rounded-full" 
+                    : "bg-gray-400 w-4 h-4 rounded-full opacity-70"}
+                `}
+                style={{
+                  boxShadow: activeImage === idx ? "0 0 8px 2px rgba(255,255,255,0.7)" : undefined,
+                }}
                 aria-label={`Go to slide ${idx + 1}`}
+                aria-pressed={activeImage === idx}
+                type="button"
               />
             ))}
           </div>
