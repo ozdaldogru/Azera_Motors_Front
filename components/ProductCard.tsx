@@ -126,7 +126,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
     alt="carfax car history logo"
     width={92}
     height={50}
-    style={{ height: "auto", opacity: product.history === '' ? 0 : 1 }}
+    style={{ height: "auto", width: "auto", opacity: product.history === '' ? 0 : 1 }}
     className="max-[431px]:w-[66px]"
   />
   {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
