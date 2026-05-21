@@ -110,8 +110,8 @@ const Slider = () => {
                 onClick={() => setActiveImage(idx)}
                 className={`transition-all duration-200 border border-white focus:outline-none 
                   ${activeImage === idx 
-                    ? "bg-white w-8 h-4 rounded-full" 
-                    : "bg-gray-400 w-4 h-4 rounded-full opacity-70"}
+                    ? "bg-white w-8 h-4 max-[600px]:w-5 max-[600px]:h-2 rounded-full" 
+                    : "bg-gray-400 w-4 h-4 max-[600px]:w-2.5 max-[600px]:h-2 rounded-full opacity-70"}
                 `}
                 style={{
                   boxShadow: activeImage === idx ? "0 0 8px 2px rgba(255,255,255,0.7)" : undefined,
