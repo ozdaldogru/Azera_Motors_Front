@@ -1,12 +1,41 @@
 "use client"
 
 import Image from "next/image";
-import React, { useState } from "react";
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
-import {Fullscreen,Thumbnails, Zoom} from 'yet-another-react-lightbox/plugins';
-import 'yet-another-react-lightbox/plugins/captions.css';
-import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import dynamic from "next/dynamic";
+import { useState } from "react";
+
+const ProductLightbox = dynamic(
+  async () => {
+    const [{ default: Lightbox }, { Fullscreen, Thumbnails, Zoom }] = await Promise.all([
+      import("yet-another-react-lightbox"),
+      import("yet-another-react-lightbox/plugins"),
+    ]);
+
+    return function DynamicLightbox({
+      open,
+      close,
+      slides,
+    }: {
+      open: boolean;
+      close: () => void;
+      slides: { src: string }[];
+    }) {
+      return (
+        <Lightbox
+          open={open}
+          close={close}
+          slides={slides}
+          plugins={[Fullscreen, Zoom, Thumbnails]}
+          captions={{
+            showToggle: true,
+            descriptionTextAlign: "end",
+          }}
+        />
+      );
+    };
+  },
+  { ssr: false }
+);
 
 const Gallery = ({ productMedia }: { productMedia: string[] }) => {
   const [mainImage, setMainImage] = useState(productMedia[0]);
@@ -35,16 +64,13 @@ const handleNext = () => {
   return (
                 <div className="w-full flex flex-col gap-3 w-[1280px]">
                   <div className="flex justify-center max-w-[1280] max-h-[720px] relative">
-                    <Lightbox
-                      open={index >= 0}
-                      close={() => setIndex(-1)}
-                      slides={productMedia.map((image) => ({ src: image }))}
-                      plugins={[Fullscreen, Zoom, Thumbnails]}
-                      captions={{
-                        showToggle: true,
-                        descriptionTextAlign: 'end',
-                      }}
-                    />
+                    {index >= 0 ? (
+                      <ProductLightbox
+                        open={index >= 0}
+                        close={() => setIndex(-1)}
+                        slides={productMedia.map((image) => ({ src: image }))}
+                      />
+                    ) : null}
             <button
               onClick={handlePrev}
               className="absolute left-4 top-1/2 text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"

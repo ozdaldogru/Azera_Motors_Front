@@ -1,8 +1,7 @@
 "use client"
-import { AiOutlineMenu ,AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -76,6 +75,7 @@ const Navbar = () => {
                       ) : (
                         <button
                           onClick={() => setIsSearchOpen(true)}
+                          aria-label="Open search"
                           className=""
                         >
                           <Search size={24} />
@@ -90,14 +90,20 @@ const Navbar = () => {
 
 
 
-        <button className='min-[901px]:hidden inline-block text-[30px] text-slate-500' onClick={toggleMenu}>
+        <button
+          className='min-[901px]:hidden inline-block text-[30px] text-slate-500'
+          onClick={toggleMenu}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+        >
                {
-                isOpen?  <AiOutlineClose/> : <AiOutlineMenu/>
+            isOpen?  <X /> : <Menu />
                }
         </button>
         {isOpen && (
           
-        <div className='flex flex-col justify-between items-center text-center gap-3 basis-full' >
+        <div id="mobile-navigation" className='flex flex-col justify-between items-center text-center gap-3 basis-full' >
             <Link href='/' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Home</Link>
             <Link href='/inventory' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Inventory</Link>
             <Link href='/contact' className="w-[250px] shadow-sm rounded-md" onClick={() => setIsOpen(!isOpen)}>Contact</Link>

@@ -16,21 +16,27 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const isProduction = process.env.NODE_ENV === "production";
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Script
-          src={process.env.YOUR_GOOGLE_TAG_SCRIPT_URL}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZD6CDE1XEZ');
-          `}
-        </Script>
+        {isProduction ? (
+          <>
+            <Script
+              src={process.env.YOUR_GOOGLE_TAG_SCRIPT_URL}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZD6CDE1XEZ');
+              `}
+            </Script>
+          </>
+        ) : null}
 
           <ToasterProvider />
           <Navbar />

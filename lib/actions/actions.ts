@@ -1,5 +1,7 @@
 const getProducts = async () => {
-  const products = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`)
+  const products = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
+    next: { revalidate: 60 },
+  })
   return products.json()
 }
 

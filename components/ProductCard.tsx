@@ -46,7 +46,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
   <Link
       href={`/products/${product._id}`}
-      className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-[#8F95A0] shadow-lg hover:shadow-2xl rounded-md "
+      className="w-[400px] max-[431px]:w-[360px] flex flex-col bg-[#F5F5F5] border border-slate-300 shadow-lg hover:shadow-2xl rounded-md "
     >
       <div className="w-full h-[300px] max-[431px]:h-[200px] relative rounded overflow-hidden">
         <Image
@@ -74,7 +74,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
       
 
 
-      <div className="flex flex-col  w-full border-b border-[#8F95A0]">
+      <div className="flex flex-col  w-full border-b border-slate-300">
 
 
         <div className="flex flex-col w-full py-2 max-[431px]:flex-row max-[431px]:flex-col max-[431px]:items-start px-4">
@@ -82,27 +82,27 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         <p className=" text-black">{product.make} {product.model}</p>
         </div>
         <div className="flex flex-col" >
-        <p className="text-body-bold text-[#8F95A0] max-[431px]:text-[15px]">${product.price.toLocaleString()}</p>
-        <p className="text-[8px] text-[#8F95A0] max-[431px]:text-[8px]">+ HST & Licensing</p>
+        <p className="text-body-bold text-slate-700 max-[431px]:text-[15px]">${product.price.toLocaleString()}</p>
+        <p className="text-[8px] text-slate-600 max-[431px]:text-[8px]">+ HST & Licensing</p>
         </div>
 
         </div>
 
         <div className="flex flex-row items-center w-full max-[431px]:text-[13px] px-4">
-        <p className="text-[#8F95A0]">{product.categories}</p>
-        <p className="text-[#8F95A0]"> • </p>
-        <p className="text-[#8F95A0]">{product.year}</p>
+        <p className="text-slate-600">{product.categories}</p>
+        <p className="text-slate-600"> • </p>
+        <p className="text-slate-600">{product.year}</p>
         </div>
 
        </div>
 
-      <div className="flex flex-row text-center w-full py-2 px-2 text-[#8F95A0] max-[431px]:text-[11px]">
+      <div className="flex flex-row text-center w-full py-2 px-2 text-slate-600 max-[431px]:text-[11px]">
         <div className="flex flex-col items-center text-center w-full px-2">
         <Image src="/mileage.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
-        <p className="text-[#8F95A0]">{product.mileage.toLocaleString()}KM</p>
+        <p className="text-slate-600">{product.mileage.toLocaleString()}KM</p>
 
         </div>
-        <div className="flex flex-col items-center text-center w-full text-[#8F95A0]">
+        <div className="flex flex-col items-center text-center w-full text-slate-600">
         <Image src="/engine.webp" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
         <p className="">{product.engineSize}</p>
 
@@ -120,7 +120,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
 
        </div>
 
-      <div className="flex flex-row justify-center items-center text-center gap-2 w-full border-t border-[#8F95A0] py-4">
+      <div className="flex flex-row justify-center items-center text-center gap-2 w-full border-t border-slate-300 py-4">
   <Image
     src="/carfax.webp"
     alt="carfax car history logo"
@@ -130,10 +130,10 @@ const ProductCard = ({ product }: ProductCardProps ) => {
     className="max-[431px]:w-[66px]"
   />
   {product.lowmileage === "Yes" || product.lowmileage === "yes" ? (
-    <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">Low Mileage</p>
+    <p className="text-slate-700 font-bold py-2 px-4 border border-slate-300 rounded-md max-[431px]:text-[9px]">Low Mileage</p>
   ) : ("")}
   {product.numberofowner === 1 || product.numberofowner < 2 ? (
-    <p className="text-[#8F95A0] font-bold py-2 px-4 border rounded-md max-[431px]:text-[9px]">{product.numberofowner} Owner</p>
+    <p className="text-slate-700 font-bold py-2 px-4 border border-slate-300 rounded-md max-[431px]:text-[9px]">{product.numberofowner} Owner</p>
   ) : ("")}
 </div>
     </Link>
