@@ -37,7 +37,7 @@ const Specifications = ({ productInfo }: { productInfo: ProductType }) => {
 
         <div className="flex flex-row items-center gap-2">
         <p className="text-[#8F95A0]">Engine Size:</p>
-        <p className="text-[#424A5]">{productInfo.engineSize}</p>
+        <p className="text-[#424A5]">{productInfo.engineSize} Liters</p>
         </div>
 
         <div className="flex flex-row items-center gap-2">

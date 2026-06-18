@@ -104,7 +104,7 @@ const ProductCard = ({ product }: ProductCardProps ) => {
         </div>
         <div className="flex flex-col items-center text-center w-full text-slate-600">
         <Image src="/engine.svg" alt="carfax car history logo" width={50} height={50} style={{ height: "auto" }}/>
-        <p className="">{product.engineSize}</p>
+        <p className="">{product.engineSize} Liters</p>
 
         </div>
         <div className="flex flex-col items-center text-center w-full">
