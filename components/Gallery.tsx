@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ProductLightbox = dynamic(
   async () => {
@@ -15,20 +15,27 @@ const ProductLightbox = dynamic(
       open,
       close,
       slides,
+      index,
+      fullscreen,
     }: {
       open: boolean;
       close: () => void;
       slides: { src: string }[];
+      index?: number;
+      fullscreen?: {
+        auto?: boolean;
+      };
     }) {
       return (
         <Lightbox
           open={open}
           close={close}
           slides={slides}
+          index={index}
           plugins={[Fullscreen, Zoom, Thumbnails]}
-          captions={{
-            showToggle: true,
-            descriptionTextAlign: "end",
+          fullscreen={fullscreen}
+          render={{
+            buttonZoom: () => null,
           }}
         />
       );
@@ -38,42 +45,65 @@ const ProductLightbox = dynamic(
 );
 
 const Gallery = ({ productMedia }: { productMedia: string[] }) => {
-  const [mainImage, setMainImage] = useState(productMedia[0]);
-  const [index, setIndex] = useState<number>(-1);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  // Find the current index of mainImage
-  const currentIndex = productMedia.findIndex(img => img === mainImage);
+  useEffect(() => {
+    setSelectedIndex(0);
+    setIsLightboxOpen(false);
+  }, [productMedia]);
+
+  const hasMedia = productMedia.length > 0;
+  const mainImage = productMedia[selectedIndex] ?? "";
+  const slides = productMedia.map((image) => ({ src: image }));
 
   // Handlers for arrows
-const handlePrev = () => {
-  if (currentIndex > 0) {
-    setMainImage(productMedia[currentIndex - 1]);
-  } else {
-    setMainImage(productMedia[productMedia.length - 1]); // Go to last image
-  }
-};
+  const handlePrev = () => {
+    if (!hasMedia) {
+      return;
+    }
 
-const handleNext = () => {
-  if (currentIndex < productMedia.length - 1) {
-    setMainImage(productMedia[currentIndex + 1]);
-  } else {
-    setMainImage(productMedia[0]); // Go to first image
-  }
-};
+    if (selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    } else {
+      setSelectedIndex(productMedia.length - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (!hasMedia) {
+      return;
+    }
+
+    if (selectedIndex < productMedia.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    } else {
+      setSelectedIndex(0);
+    }
+  };
 
   return (
                 <div className="w-full flex flex-col gap-3 w-[1280px]">
-                  <div className="flex justify-center max-w-[1280] max-h-[720px] relative">
-                    {index >= 0 ? (
+                  <div className="flex justify-center max-w-[1280px] max-h-[720px] relative">
+                    {hasMedia ? (
                       <ProductLightbox
-                        open={index >= 0}
-                        close={() => setIndex(-1)}
-                        slides={productMedia.map((image) => ({ src: image }))}
+                        open={isLightboxOpen}
+                        close={() => setIsLightboxOpen(false)}
+                        slides={slides}
+                        fullscreen={{ auto: true }}
+                        index={selectedIndex}
                       />
                     ) : null}
+                    {!hasMedia ? (
+                      <div className="flex h-[320px] w-full items-center justify-center rounded-lg bg-gray-100 text-sm text-gray-500">
+                        No product images available
+                      </div>
+                    ) : null}
+                    {hasMedia ? (
+                      <>
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+              className="absolute left-4 top-1/2 text-white -translate-y-1/2 bg-transparent rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
               aria-label="Previous image"
             >
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
@@ -100,12 +130,12 @@ const handleNext = () => {
                 max-[600px]:h-[260px]
                 max-[900px]:h-[320px]
               "
-              onClick={() => setIndex(currentIndex)} 
+                onClick={() => setIsLightboxOpen(true)}
             />
             {/* Next Arrow */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 text-white -translate-y-1/2 bg-opacity-00 rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
+              className="absolute right-4 top-1/2 text-white -translate-y-1/2 bg-transparent rounded-full p-3 shadow-lg hover:bg-white hover:text-black transition-colors duration-200 z-10 flex items-center justify-center"
               aria-label="Next image"
             >
               <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
@@ -113,6 +143,8 @@ const handleNext = () => {
                 <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
+                      </>
+                    ) : null}
                   </div>
 
                   <div className="flex flex-wrap gap-3 justify-center overflow-auto tailwind-scrollbar-hide">
@@ -124,7 +156,7 @@ const handleNext = () => {
                         width={40}
                         alt="product"
                         className={`cursor-pointer w-36 h-24 rounded-lg ${mainImage === image ? 'border-2 border-black' : ''}`}
-                        onClick={() => setMainImage(image)}
+                        onClick={() => setSelectedIndex(idx)}
                       />
                     ))}
                   </div>
